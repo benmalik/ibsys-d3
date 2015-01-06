@@ -36,7 +36,7 @@ namespace BikeTec
         const String MSG_FILENAME_INPUT_XML = "Input_Period_";
 
         BrushConverter bc = new BrushConverter();
-        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -49,6 +49,7 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = null;
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = null;
             ChangeLanguage("de-DE");
 
@@ -152,6 +153,7 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = null;
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = null;
 
         }
@@ -316,6 +318,7 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = null;
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = null;
         }
 
@@ -331,6 +334,13 @@ namespace BikeTec
             this.inputForecast(sender, e);
         }
 
+        void backShift(object sender, RoutedEventArgs e)
+        {
+            this.DecreaseButton_Click(sender, e);
+            this.inputShift(sender, e);
+        }
+
+
         void backArticleOrder(object sender, RoutedEventArgs e)
         {
             this.DecreaseButton_Click(sender, e);
@@ -345,10 +355,11 @@ namespace BikeTec
 
         void backErgebnis(object sender, RoutedEventArgs e)
         {
-            ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
+            //ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Visible;
-            bufferGrid.Visibility = System.Windows.Visibility.Hidden;
-            ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
+            //bufferGrid.Visibility = System.Windows.Visibility.Hidden;
+            //ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
+            SchichtGrid.Visibility = System.Windows.Visibility.Hidden;
 
             outputGrid.Visibility = System.Windows.Visibility.Hidden;
             labelWILLKOMMEN.Background = null;
@@ -356,6 +367,7 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = (Brush)bc.ConvertFrom("#FF7FD009");
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = null;
         }
 
@@ -376,6 +388,7 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = (Brush)bc.ConvertFrom("#FF7FD009");
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = null;
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = null;
 
             //TODO: new Prognoseeingabe().Show();
@@ -399,10 +412,70 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = (Brush)bc.ConvertFrom("#FF7FD009");
             labelNACHBESTELLUNG.Background = null;
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = null;
 
             berechneVerbrauch();
         }
+        /* //////////////
+         * INPUT SHIFT
+         */
+        /////////////
+
+        void inputShift(object sender, RoutedEventArgs e)
+        {
+            this.IncreaseButton_Click(sender, e);
+
+            //DragDropGrid.Visibility = System.Windows.Visibility.Hidden;
+            //bufferGrid.Visibility = System.Windows.Visibility.Hidden;
+            //ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
+            SchichtGrid.Visibility = System.Windows.Visibility.Visible;
+            ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
+            labelWILLKOMMEN.Background = null;
+            labelINPUT.Background = null;
+            labelVERKAUFSPROGNOSE.Background = null;
+            labelPUFFER.Background = null;
+            labelNACHBESTELLUNG.Background = null;
+            labelSCHICHT.Background = (Brush)bc.ConvertFrom("#FF7FD009");
+            labelZUSAMMENFASSUNG.Background = null;
+            //TODO: new Prognoseeingabe().Show();
+        }
+
+        void berechneSchicht()
+        {
+            dc.GetArbeitsplatz(1).Schichten = comboBoxAP1.SelectedIndex + 1;
+            dc.GetArbeitsplatz(2).Schichten = comboBoxAP2.SelectedIndex + 1;
+            dc.GetArbeitsplatz(3).Schichten = comboBoxAP3.SelectedIndex + 1;
+            dc.GetArbeitsplatz(4).Schichten = comboBoxAP4.SelectedIndex + 1;
+            dc.GetArbeitsplatz(6).Schichten = comboBoxAP6.SelectedIndex + 1;
+            dc.GetArbeitsplatz(7).Schichten = comboBoxAP7.SelectedIndex + 1;
+            dc.GetArbeitsplatz(8).Schichten = comboBoxAP8.SelectedIndex + 1;
+            dc.GetArbeitsplatz(9).Schichten = comboBoxAP9.SelectedIndex + 1;
+            dc.GetArbeitsplatz(10).Schichten = comboBoxAP10.SelectedIndex + 1;
+            dc.GetArbeitsplatz(14).Schichten = comboBoxAP11.SelectedIndex + 1;
+            dc.GetArbeitsplatz(12).Schichten = comboBoxAP12.SelectedIndex + 1;
+            dc.GetArbeitsplatz(13).Schichten = comboBoxAP13.SelectedIndex + 1;
+            dc.GetArbeitsplatz(14).Schichten = comboBoxAP14.SelectedIndex + 1;
+            dc.GetArbeitsplatz(15).Schichten = comboBoxAP15.SelectedIndex + 1;
+
+            dc.GetArbeitsplatz(1).UeberMin = Convert.ToInt32(textBoxAP1.Text);
+            dc.GetArbeitsplatz(2).UeberMin = Convert.ToInt32(textBoxAP2.Text);
+            dc.GetArbeitsplatz(3).UeberMin = Convert.ToInt32(textBoxAP3.Text);
+            dc.GetArbeitsplatz(4).UeberMin = Convert.ToInt32(textBoxAP4.Text);
+            dc.GetArbeitsplatz(6).UeberMin = Convert.ToInt32(textBoxAP6.Text);
+            dc.GetArbeitsplatz(7).UeberMin = Convert.ToInt32(textBoxAP7.Text);
+            dc.GetArbeitsplatz(8).UeberMin = Convert.ToInt32(textBoxAP8.Text);
+            dc.GetArbeitsplatz(9).UeberMin = Convert.ToInt32(textBoxAP9.Text);
+            dc.GetArbeitsplatz(10).UeberMin = Convert.ToInt32(textBoxAP10.Text);
+            dc.GetArbeitsplatz(11).UeberMin = Convert.ToInt32(textBoxAP11.Text);
+            dc.GetArbeitsplatz(12).UeberMin = Convert.ToInt32(textBoxAP12.Text);
+            dc.GetArbeitsplatz(13).UeberMin = Convert.ToInt32(textBoxAP13.Text);
+            dc.GetArbeitsplatz(14).UeberMin = Convert.ToInt32(textBoxAP14.Text);
+            dc.GetArbeitsplatz(15).UeberMin = Convert.ToInt32(textBoxAP15.Text);
+
+
+        }
+
 
         void weiterButtonErgebnis(object sender, RoutedEventArgs e)
         {
@@ -412,6 +485,7 @@ namespace BikeTec
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Hidden;
             bufferGrid.Visibility = System.Windows.Visibility.Hidden;
             outputGrid.Visibility = System.Windows.Visibility.Hidden;
+            SchichtGrid.Visibility = System.Windows.Visibility.Hidden;
 
             ergebnisGrid.Visibility = System.Windows.Visibility.Visible;
             labelWILLKOMMEN.Background = null;
@@ -419,9 +493,11 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = null;
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = (Brush)bc.ConvertFrom("#FF7FD009");
 
             //fillChart();
+            berechneSchicht();
 
             //berechneVerbrauch();
         }
@@ -495,6 +571,7 @@ namespace BikeTec
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = (Brush)bc.ConvertFrom("#FF7FD009");
+            labelSCHICHT.Background = null;
             labelZUSAMMENFASSUNG.Background = null;
         }
 
@@ -597,20 +674,30 @@ namespace BikeTec
             buttonValidation.Visibility = System.Windows.Visibility.Visible;
         }
 
+        void clearOrderData(object sender, RoutedEventArgs e)
+        {
+            dc.ClearData();
+            clearTextBoxesOrderData();
+
+            buttonValidation.Visibility = System.Windows.Visibility.Hidden;
+        }
+
 
         void showButtonValidation(object sender, RoutedEventArgs e)
         {
             this.IncreaseButton_Click(sender, e);
 
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Hidden;
-            ergebnisGrid.Visibility = System.Windows.Visibility.Visible;
+            SchichtGrid.Visibility = System.Windows.Visibility.Visible;
+            //ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
 
             labelWILLKOMMEN.Background = null;
             labelINPUT.Background = null;
             labelVERKAUFSPROGNOSE.Background = null;
             labelPUFFER.Background = null;
             labelNACHBESTELLUNG.Background = null;
-            labelZUSAMMENFASSUNG.Background = (Brush)bc.ConvertFrom("#FF7FD009");
+            labelSCHICHT.Background = (Brush)bc.ConvertFrom("#FF7FD009");
+            labelZUSAMMENFASSUNG.Background = null;
 
             writeUserOdersToDcOrderList();
 
@@ -737,6 +824,7 @@ namespace BikeTec
             S15B.Text = Convert.ToString(dc.GetArbeitsplatz(15).Schichten + " / " + dc.GetArbeitsplatz(15).UeberMin);
 
 
+
             ToolTipService.SetToolTip(S1, (dc.GetArbeitsplatz(1).BenoetigteZeit * 100) / dc.GetArbeitsplatz(1).ZuVerfuegungStehendeZeit + "% Auslastung (" + dc.GetArbeitsplatz(1).BenoetigteZeit + " Min. von " + dc.GetArbeitsplatz(1).ZuVerfuegungStehendeZeit + " Min.)");
             ToolTipService.SetToolTip(S2, (dc.GetArbeitsplatz(2).BenoetigteZeit * 100) / dc.GetArbeitsplatz(2).ZuVerfuegungStehendeZeit + "% Auslastung (" + dc.GetArbeitsplatz(2).BenoetigteZeit + " Min. von " + dc.GetArbeitsplatz(2).ZuVerfuegungStehendeZeit + " Min.)");
             ToolTipService.SetToolTip(S3, (dc.GetArbeitsplatz(3).BenoetigteZeit * 100) / dc.GetArbeitsplatz(3).ZuVerfuegungStehendeZeit + "% Auslastung (" + dc.GetArbeitsplatz(3).BenoetigteZeit + " Min. von " + dc.GetArbeitsplatz(3).ZuVerfuegungStehendeZeit + " Min.)");
@@ -764,6 +852,37 @@ namespace BikeTec
             ToolTipService.SetToolTip(S14, (dc.GetArbeitsplatz(14).BenoetigteZeit * 100) / dc.GetArbeitsplatz(14).ZuVerfuegungStehendeZeit + "% Auslastung (" + dc.GetArbeitsplatz(14).BenoetigteZeit + " Min. von " + dc.GetArbeitsplatz(14).ZuVerfuegungStehendeZeit + " Min.)");
             ToolTipService.SetToolTip(S15A, (dc.GetArbeitsplatz(15).BenoetigteZeit * 100) / dc.GetArbeitsplatz(15).ZuVerfuegungStehendeZeit + "% Auslastung (" + dc.GetArbeitsplatz(15).BenoetigteZeit + " Min. von " + dc.GetArbeitsplatz(15).ZuVerfuegungStehendeZeit + " Min.)");
             ToolTipService.SetToolTip(S15B, (dc.GetArbeitsplatz(15).BenoetigteZeit * 100) / dc.GetArbeitsplatz(15).ZuVerfuegungStehendeZeit + "% Auslastung (" + dc.GetArbeitsplatz(15).BenoetigteZeit + " Min. von " + dc.GetArbeitsplatz(15).ZuVerfuegungStehendeZeit + " Min.)");
+
+
+            textBoxAP1.Text = Convert.ToString(dc.GetArbeitsplatz(1).UeberMin);
+            comboBoxAP1.SelectedIndex = dc.GetArbeitsplatz(1).Schichten - 1;
+            ToolTipService.SetToolTip(textBoxAP1, dc.GetArbeitsplatz(1).UeberMin);
+            textBoxAP2.Text = Convert.ToString(dc.GetArbeitsplatz(2).UeberMin);
+            comboBoxAP2.SelectedIndex = dc.GetArbeitsplatz(2).Schichten - 1;
+            textBoxAP3.Text = Convert.ToString(dc.GetArbeitsplatz(3).UeberMin);
+            comboBoxAP3.SelectedIndex = dc.GetArbeitsplatz(3).Schichten - 1;
+            textBoxAP4.Text = Convert.ToString(dc.GetArbeitsplatz(4).UeberMin);
+            comboBoxAP4.SelectedIndex = dc.GetArbeitsplatz(4).Schichten - 1;
+            textBoxAP6.Text = Convert.ToString(dc.GetArbeitsplatz(6).UeberMin);
+            comboBoxAP6.SelectedIndex = dc.GetArbeitsplatz(6).Schichten - 1;
+            textBoxAP7.Text = Convert.ToString(dc.GetArbeitsplatz(7).UeberMin);
+            comboBoxAP7.SelectedIndex = dc.GetArbeitsplatz(7).Schichten - 1;
+            textBoxAP8.Text = Convert.ToString(dc.GetArbeitsplatz(8).UeberMin);
+            comboBoxAP8.SelectedIndex = dc.GetArbeitsplatz(8).Schichten - 1;
+            textBoxAP9.Text = Convert.ToString(dc.GetArbeitsplatz(9).UeberMin);
+            comboBoxAP9.SelectedIndex = dc.GetArbeitsplatz(9).Schichten - 1;
+            textBoxAP10.Text = Convert.ToString(dc.GetArbeitsplatz(10).UeberMin);
+            comboBoxAP10.SelectedIndex = dc.GetArbeitsplatz(10).Schichten - 1;
+            textBoxAP11.Text = Convert.ToString(dc.GetArbeitsplatz(11).UeberMin);
+            comboBoxAP11.SelectedIndex = dc.GetArbeitsplatz(11).Schichten - 1;
+            textBoxAP12.Text = Convert.ToString(dc.GetArbeitsplatz(12).UeberMin);
+            comboBoxAP12.SelectedIndex = dc.GetArbeitsplatz(12).Schichten - 1;
+            textBoxAP13.Text = Convert.ToString(dc.GetArbeitsplatz(13).UeberMin);
+            comboBoxAP13.SelectedIndex = dc.GetArbeitsplatz(13).Schichten - 1;
+            textBoxAP14.Text = Convert.ToString(dc.GetArbeitsplatz(14).UeberMin);
+            comboBoxAP14.SelectedIndex = dc.GetArbeitsplatz(14).Schichten - 1;
+            textBoxAP15.Text = Convert.ToString(dc.GetArbeitsplatz(15).UeberMin);
+            comboBoxAP15.SelectedIndex = dc.GetArbeitsplatz(15).Schichten - 1;
 
             E13.Text = Convert.ToString("E13: " + (dc.GetTeil(13) as ETeil).Produktionsmenge);
             ToolTipService.SetToolTip(E13, Stammdaten.TBez.GetValue(13 - 1));

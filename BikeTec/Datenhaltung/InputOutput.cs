@@ -188,8 +188,8 @@ namespace Tool
             WriteArbeitsplaetze();
 
             //Rest
-            WriteFile("<MarketplaceTransactions />");
-            WriteFile("<IsQualityControlEnabled>false</IsQualityControlEnabled>");
+            //WriteFile("<MarketplaceTransactions />");
+            //WriteFile("<IsQualityControlEnabled>false</IsQualityControlEnabled>");
 
             //Dateiende
             WriteFile("</PeriodInput>");
@@ -206,54 +206,58 @@ namespace Tool
 
         private static void WriteVerkaufswuensche()
         {
-            WriteFile("<SalesWishes>");
+            WriteFile("<sellwish>");
 
             for (int i = 1; i < 4; ++i)
             {
                 ETeil et = instance.GetTeil(i) as ETeil;
 
-                WriteFile("<SalesWish>");
-                WriteFile("<SalesItemInternalNumber>" + i + "</SalesItemInternalNumber>");
-                WriteFile("<SaleQuantity>" + et.VerbrauchAktuell + "</SaleQuantity>");
-                WriteFile("<DirectSaleQuantity>" + "0" + "</DirectSaleQuantity>");
-                WriteFile("<DirectSalePrice>" + "0.0" + "</DirectSalePrice>");
-                WriteFile("<DirectSalePenalty>" + "0.0" + "</DirectSalePenalty>");
-                WriteFile("</SalesWish>");
+                //WriteFile("<salesWish>");
+                WriteFile("<item article =\"" + i + "\" quantity =\"" + et.VerbrauchAktuell + "\" />");
+                //WriteFile("<SaleQuantity>" + et.VerbrauchAktuell + "</SaleQuantity>");
+                // WriteFile("<DirectSaleQuantity>" + "0" + "</DirectSaleQuantity>");
+                //WriteFile("<DirectSalePrice>" + "0.0" + "</DirectSalePrice>");
+                //WriteFile("<DirectSalePenalty>" + "0.0" + "</DirectSalePenalty>");
+                //WriteFile("</salesWish>");
             }
 
-            WriteFile("</SalesWishes>");
+            WriteFile("</sellwish>");
 
         }
 
         private static void WriteBestellungen()
         {
             //Bestellungen
-            WriteFile("<ItemOrders>");
+            WriteFile("<orderlist>");
 
             foreach (Bestellposition bp in instance.Bestellung)
             {
-                WriteFile("<ItemOrder>");
-                WriteFile("<ItemInternalNumber>" + bp.Kaufteil.Nummer + "</ItemInternalNumber>");
-                WriteFile("<Quantity>" + bp.Menge + "</Quantity>");
+                //WriteFile("<ItemOrder>");
+                //String bestellart = bp.OutputEil ==5 ? "normal" : "fast";
+                WriteFile("<order article =\"" + bp.Kaufteil.Nummer
+                    + "\" quantity =\"" + bp.Menge
+                    + "\" modus =\"" + bp.OutputEil
+                    + "\" />");
+                //WriteFile("<Quantity>" + bp.Menge + "</Quantity>");
 
-                if (bp.OutputEil == 5)
+                /*if (bp.OutputEil == 5)
                 {
                     WriteFile("<Supplier>" + "Normal" + "</Supplier>");
                 }
                 else
                 {
                     WriteFile("<Supplier>" + "Fast" + "</Supplier>");
-                }
-                WriteFile("</ItemOrder>");
+                }*/
+                //WriteFile("</ItemOrder>");
             }
 
-            WriteFile("</ItemOrders>");
+            WriteFile("</orderlist>");
         }
 
         private static void WriteProduktionsauftraege()
         {
             //Produktionsaufträge
-            WriteFile("<ProductionOrders>");
+            WriteFile("<productionlist>");
 
             foreach (int z in instance.Reihenfolge)
             {
@@ -263,23 +267,22 @@ namespace Tool
 
                     if (et.Produktionsmenge > 0)
                     {
-                        WriteFile("<ProductionOrder>");
-                        WriteFile("<ItemInternalNumber>" + et.Nummer + "</ItemInternalNumber>");
+                        //WriteFile("<ProductionOrder>");
+                        WriteFile("<production article =\"" + et.Nummer
+                            + "\" quantity =\"" + Convert.ToInt32(et.Produktionsmenge / 2)
+                            + "\" />");
                         //WriteFile("<Quantity>" + et.Produktionsmenge + "</Quantity>");
-                        WriteFile("<Quantity>" + Convert.ToInt32(et.Produktionsmenge / 2) + "</Quantity>");
-
-
-                        WriteFile("</ProductionOrder>");
+                        //WriteFile("<Quantity>" + Convert.ToInt32(et.Produktionsmenge / 2) + "</Quantity>");
                     }
                 }
             }
-            WriteFile("</ProductionOrders>");
+            WriteFile("</productionlist>");
         }
 
         //Arbeitsplatz Ueberstunden und Schichten
         private static void WriteArbeitsplaetze()
         {
-            WriteFile("<WorkplaceShifts>");
+            WriteFile("<workingtimelist>");
 
             for (int i = 1; i <= 15; i++)
             {
@@ -289,13 +292,16 @@ namespace Tool
                     i++;
                 }
 
-                WriteFile("<WorkplaceShift>");
-                WriteFile("<WorkplaceName>" + i + "</WorkplaceName>");
-                WriteFile("<Shifts>" + instance.GetArbeitsplatz(i).Schichten + "</Shifts>");
-                WriteFile("<OvertimeInMinutes>" + instance.GetArbeitsplatz(i).UeberMin + "</OvertimeInMinutes>");
-                WriteFile("</WorkplaceShift>");
+                //WriteFile("<WorkplaceShift>");
+                WriteFile("<workingtime station =\"" + i
+                    + "\" shift = \"" + instance.GetArbeitsplatz(i).Schichten
+                    + "\" overtime =\"" + instance.GetArbeitsplatz(i).UeberMin
+                    + "\"/>");
+                //WriteFile("<Shifts>" + instance.GetArbeitsplatz(i).Schichten + "</Shifts>");
+                //WriteFile("<OvertimeInMinutes>" + instance.GetArbeitsplatz(i).UeberMin + "</OvertimeInMinutes>");
+                //WriteFile("</WorkplaceShift>");
             }
-            WriteFile("</WorkplaceShifts>");
+            WriteFile("</workingtimelist>");
         }
 
         /// <summary>
