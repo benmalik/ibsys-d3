@@ -142,20 +142,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\1.png" />
-    <Resource Include="Resources\arbeitsplaetze.bmp" />
-    <Resource Include="Resources\arbeitsplaetze.png" />
-    <Resource Include="Resources\bike_tec_logo.png" />
-    <Resource Include="Resources\bike_tec_logo_small.png" />
-    <Resource Include="Resources\calculator-icon.jpg" />
     <Resource Include="Resources\de.gif" />
-    <Resource Include="Resources\Draganddrop.png" />
     <Resource Include="Resources\en.gif" />
-    <Resource Include="Resources\icon.ico" />
-    <Resource Include="Resources\logo.png" />
-    <Resource Include="Resources\logo1.png" />
-    <Resource Include="Resources\optimierung.jpg" />
-    <Resource Include="Resources\Start.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -176,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bike_tec_logo_small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bikenride.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

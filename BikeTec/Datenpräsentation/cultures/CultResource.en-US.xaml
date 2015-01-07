@@ -3,13 +3,26 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:system="clr-namespace:System;assembly=mscorlib">
 
-    <system:String x:Key="WindowStart-labelWILLKOMMEN">START</system:String>
-    <system:String x:Key="WindowStart-labelINPUT">DATA IMPORT</system:String>
-    <system:String x:Key="WindowStart-labelVERKAUFSPROGNOSE">SALES</system:String>
-    <system:String x:Key="WindowStart-labelPUFFER">STOCK</system:String>
-    <system:String x:Key="WindowStart-labelNACHBESTELLUNG">ORDERS</system:String>
-    <system:String x:Key="WindowStart-labelZUSAMMENFASSUNG">RESULT</system:String>
-    <system:String x:Key="WindowStart-Title">BikeTec Production Planning System</system:String>
-
+    <system:String x:Key="WindowStart-labelWILLKOMMEN">Start</system:String>
+    <system:String x:Key="WindowStart-labelINPUT">Input File</system:String>
+    <system:String x:Key="WindowStart-labelVERKAUFSPROGNOSE">Sales</system:String>
+    <system:String x:Key="WindowStart-labelPUFFER">Warehouse</system:String>
+    <system:String x:Key="WindowStart-labelNACHBESTELLUNG">Order Quantities</system:String>
+    <system:String x:Key="WindowStart-labelSCHICHT">Work Schedule</system:String>
+    <system:String x:Key="WindowStart-labelZUSAMMENFASSUNG">Result</system:String>
+    <system:String x:Key="WindowStart-Title">BIKE 'n' ride PPS</system:String>
+    <system:String x:Key="WindowStart-labelNext">Next</system:String>
+    <system:String x:Key="WindowStart-labelExit">Quit</system:String>
+    <system:String x:Key="WindowStart-labelSave">Save</system:String>
+    <system:String x:Key="WindowStart-labelXML">In diesem Schritt erfolgt das Importieren der XML-Datei. Hierdurch werden die für die Planung erforderlichen &#xA;Stammdaten eingelesen.&#xA;&#xA;Bitte wählen Sie in dem Dialog Ihre lokal gespeicherte XML-Datei aus.</system:String>
+    <system:String x:Key="WindowStart-labelForecast">In diesem Schritt erfolgt die Eingabe der geplanten Absatzmengen. &#xA;Geben Sie hierfür bitte in Spalte 1 die Werte für die kommende Periode ein. In den rechten drei Spalten geben Sie bitte&#xA;einen Forecast-Wert ein.</system:String>
+    <system:String x:Key="WindowStart-labelPeriod">Aktuelle Periode</system:String>
+    <system:String x:Key="WindowStart-labelBuffer">Puffer für Teile die in mehrere Produkte eingehen</system:String>
+    <system:String x:Key="WindowStart-labelVBuffer">Hier aufgezeigt sind die vom Produktionsplanungssystem vorgeschlagenen Puffer. Sie können diese entweder&#xA;unverändert übernehmen, oder ganz bzw. teilweise anpassen.</system:String>
+    <system:String x:Key="WindowStart-labelOrder">In diesem Prozessschritt erfolgt die Festlegung der Bestellmengen von Fremdbezugsteilen. Sie können entweder&#xA;manuell Ihre eigenen Bestellwünsche erfassen oder die optimalen Bestellmengen vom System berechnen lassen.&#xA;Um die Bestellmengen vom System berechnen zu lassen, klicken Sie auf den entsprechenden Button.</system:String>
+    <system:String x:Key="WindowStart-labelCalculate">Berechne&#xA;Bestellmengen</system:String>
+    <system:String x:Key="WindowStart-labelSuccess">Die Planung wurde erfolgreich durchgeführt. Hier finden Sie eine Übersicht über das Ergebnis der Periode.&#xA;Sie haben nun die Möglichkeit das Ergebnis in eine XML-Datei zu speichern. Wählen  Sie hierfür den &#xA;Button &quot;Speichern&quot;.</system:String>
+    <system:String x:Key="WindowStart-chooseFile">Choose File</system:String>
+    <system:String x:Key="WindowStart-labelBack">Back</system:String>
     
 </ResourceDictionary>

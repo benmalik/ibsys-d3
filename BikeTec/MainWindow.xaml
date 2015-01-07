@@ -4,7 +4,7 @@
         Title="{DynamicResource WindowStart-Title}" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         Height="600" Width="940" BorderBrush="{x:Null}" Foreground="Black" ResizeMode="NoResize" Closing="Window_Closing"
         >
-    <Grid x:Name="Grid" Background="#FFF0F0F0" Margin="0,0,0,-2.5">
+    <Grid x:Name="Grid" Background="White" Margin="0,0,0,-2.5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="37*"/>
             <ColumnDefinition Width="14*"/>
@@ -46,11 +46,11 @@
         		Height="271"
         		Content="Herzlich Willkommen im BikeTec Produktionsplanungs- und Steuerungssystem!&#xA; &#xA;Das integrierte Tool bieten Ihnen eine optimale Unterstützung bei der  Planung des Produktionsprogramms für&#xA;die nächste Periode. Nach der  Eingabe Ihres Vertriebswunschs für die kommende Periode führt das Tool&#xA;eine umfassende Planung des Produktionsprogramms durch. Neben der  Produktionsplanung schlägt Ihnen das&#xA;Tool auch eine optimale Bestellmenge  der einzelnen Kaufteile vor.  Die Anwendung führt Sie einfach durch die&#xA;einzelnen  Prozessschritte und erklärt jeweils kurz, welche Entscheidungen Sie zu treffen haben. &#xA;&#xA;Zum Start der Anwendung bitte auf &quot;Weiter&quot; klicken." />
             <Button Style="{DynamicResource Poly_Weiter}" Content="{DynamicResource WindowStart-labelNext}" Click="selectFile" Margin="0,0,-60,52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF8FE611" Height="33" Width="65" Grid.Column="2" />
-            <Image HorizontalAlignment="Left" Height="140" Margin="218,39,0,0" VerticalAlignment="Top" Width="536" Source="Resources/bike_tec_logo.png">
+            <!--<Image HorizontalAlignment="Left" Height="140" Margin="218,39,0,0" VerticalAlignment="Top" Width="536" Source="Resources/bike_tec_logo.png">
                 <Image.ContextMenu>
                     <ContextMenu/>
                 </Image.ContextMenu>
-            </Image>
+            </Image>-->
         </Grid>
 
         <!-- Progress Bar
@@ -61,13 +61,13 @@
             </controls:WizardProgressBar>
             -->
 
-        <Label Content="{DynamicResource WindowStart-labelWILLKOMMEN}" Height="30" FontSize="12" Margin="18,7,0,0" x:Name="labelWILLKOMMEN" Visibility="Visible" Grid.ColumnSpan="3" Width="131" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Label Content="{DynamicResource WindowStart-labelINPUT}" Height="30" FontSize="12" Margin="47,7,0,0" x:Name="labelINPUT" Grid.Column="2" Width="134" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" />
-        <Label Content="{DynamicResource WindowStart-labelVERKAUFSPROGNOSE}" Height="30" FontSize="12" Margin="181,7,0,0" x:Name="labelVERKAUFSPROGNOSE" Grid.Column="2" Width="132" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Label Content="{DynamicResource WindowStart-labelPUFFER}" Height="30" FontSize="12" Margin="313,7,0,0" x:Name="labelPUFFER" Grid.Column="2" Grid.ColumnSpan="2" Width="132" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Label Content="{DynamicResource WindowStart-labelNACHBESTELLUNG}" Height="30" FontSize="12" Margin="48,7,0,0" x:Name="labelNACHBESTELLUNG" Grid.Column="3" BorderThickness="2" Width="106" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" />
-        <Label Content="SCHICHTEN" Height="30" FontSize="12" Margin="70,7,0,0" x:Name="labelSCHICHT" Grid.Column="4" BorderThickness="2" Width="95" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" />
-        <Label Content="{DynamicResource WindowStart-labelZUSAMMENFASSUNG}" Height="30" FontSize="12" Margin="165,7,0,0" x:Name="labelZUSAMMENFASSUNG" Grid.Column="5" Background="{x:Null}" BorderBrush="#FF858585" BorderThickness="2" Width="74" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label Content="{DynamicResource WindowStart-labelWILLKOMMEN}" Height="30" FontSize="12" Margin="18,7,0,0" x:Name="labelWILLKOMMEN" Visibility="Visible" Grid.ColumnSpan="3" Width="131" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
+        <Label Content="{DynamicResource WindowStart-labelINPUT}" Height="30" FontSize="12" Margin="47,7,0,0" x:Name="labelINPUT" Grid.Column="2" Width="134" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" FontFamily="Arial" />
+        <Label Content="{DynamicResource WindowStart-labelVERKAUFSPROGNOSE}" Height="30" FontSize="12" Margin="181,7,0,0" x:Name="labelVERKAUFSPROGNOSE" Grid.Column="2" Width="132" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
+        <Label Content="{DynamicResource WindowStart-labelPUFFER}" Height="30" FontSize="12" Margin="313,7,0,0" x:Name="labelPUFFER" Grid.Column="2" Grid.ColumnSpan="2" Width="132" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
+        <Label Content="{DynamicResource WindowStart-labelNACHBESTELLUNG}" Height="30" FontSize="12" Margin="48,7,0,0" x:Name="labelNACHBESTELLUNG" Grid.Column="3" BorderThickness="2" Width="106" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" />
+        <Label Content="{DynamicResource WindowStart-labelSCHICHT}" Height="30" FontSize="12" Margin="70,7,0,0" x:Name="labelSCHICHT" Grid.Column="4" BorderThickness="2" Width="95" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial"/>
+        <Label Content="{DynamicResource WindowStart-labelZUSAMMENFASSUNG}" Height="30" FontSize="12" Margin="165,7,0,0" x:Name="labelZUSAMMENFASSUNG" Grid.Column="5" Background="{x:Null}" BorderBrush="#FF858585" BorderThickness="2" Width="74" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
 
         <!-- DATENIMPORT -->
         <Grid x:Name="DragDropGrid" Margin="0,46,0,-4" Grid.RowSpan="2" Grid.ColumnSpan="5" Visibility="Hidden">
@@ -92,7 +92,7 @@
                 <ComboBoxItem Content="10"/>
             </ComboBox>
             <Button Content="{DynamicResource WindowStart-chooseFile}" Height="32" HorizontalAlignment="Left" Margin="488,96,0,0"
-        		x:Name="buttonSelectFile" VerticalAlignment="Top" Width="88" Click="buttonBrowseFile" Grid.Row="1" Background="#FFB4BBC4" />
+        		x:Name="buttonSelectFile" VerticalAlignment="Top" Width="88" Click="buttonBrowseFile" Grid.Row="1" Background="#FFB4BBC4" FontFamily="Arial" />
             <!--
                 <Button Content="Load Data" Height="32" HorizontalAlignment="Left" Margin="455,135,0,0"
                 Name="buttonSelectURL" VerticalAlignment="Top" Width="88" Click="buttonBrowseURL" Grid.Row="1" Visibility="Hidden"/>
@@ -103,8 +103,8 @@
                 <!--<RadioButton Name="Internet" GroupName="DownloadLocation" Content="Internet" Checked="Internet_OnChecked"/> -->
             </StackPanel>
 
-            <Button Style="{DynamicResource Poly_Weiter}" x:Name="buttonInputForecast" Content="{DynamicResource WindowStart-labelNext}" Click="inputForecast" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF8FE611" Height="33" Width="66" Grid.Row="1" />
-            <Button Style="{DynamicResource Poly_Zurueck}" x:Name="buttonBackSelectFile" Content="{DynamicResource WindowStart-labelBack}" Click="backSelectFile" VerticalAlignment="Bottom" Grid.Row="1" Margin="774,0,0,10" HorizontalAlignment="Left" Background="#FF8FE611" Width="65" Height="33" />
+            <Button Style="{DynamicResource Poly_Weiter}" x:Name="buttonInputForecast" Content="{DynamicResource WindowStart-labelNext}" Click="inputForecast" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF8FE611" Height="33" Width="66" Grid.Row="1" FontFamily="Arial"/>
+            <Button Style="{DynamicResource Poly_Zurueck}" x:Name="buttonBackSelectFile" Content="{DynamicResource WindowStart-labelBack}" Click="backSelectFile" VerticalAlignment="Bottom" Grid.Row="1" Margin="774,0,0,10" HorizontalAlignment="Left" Background="#FF8FE611" Width="65" Height="33" FontFamily="Arial"/>
             <Label HorizontalAlignment="Left"
         		VerticalAlignment="Top"
         		Width="602"
@@ -122,10 +122,10 @@
                 
                 x:Name="buttonBuffer" 
                 Click="inputButtonBuffer" 
-                Content="{DynamicResource WindowStart-labelNext}"  />
+                Content="{DynamicResource WindowStart-labelNext}"  FontFamily="Arial"/>
             <Button 
                 Style="{DynamicResource Poly_Zurueck}"
-                x:Name="buttonBackForecast" Content="{DynamicResource WindowStart-labelBack}" Click="backForecast" VerticalAlignment="Bottom" Margin="774,0,0,9" HorizontalAlignment="Left" Background="#FF8FE611" Width="66" Height="34" />
+                x:Name="buttonBackForecast" Content="{DynamicResource WindowStart-labelBack}" Click="backForecast" VerticalAlignment="Bottom" Margin="774,0,0,9" HorizontalAlignment="Left" Background="#FF8FE611" Width="66" Height="34" FontFamily="Arial"/>
             <!-- Margin="100,0,26,-18" -->
 
             <ComboBox HorizontalAlignment="Left"
@@ -947,7 +947,7 @@
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="623,112,0,0" Width="80" Height="28" Content="P3" />
 
             <Separator Height="8" HorizontalAlignment="Left" Margin="70,0,0,133" x:Name="separator2" VerticalAlignment="Bottom" Width="635" />
-            <TextBlock Margin="70,412,111,117"><Run Language="de-de" Text="{DynamicResource WindowStart-labelBuffer}"/></TextBlock>
+            <TextBlock Margin="70,412,111,117"><Run Language="de-de" Text="{DynamicResource WindowStart-labelBuffer}" FontFamily="Arial"/></TextBlock>
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,436,0,0" Width="30" Height="25" Content="E26" />
             <TextBox HorizontalAlignment="Left"
 			VerticalAlignment="Top"
@@ -1008,7 +1008,7 @@
         		Click="showButtonValidation" Visibility="Hidden" />
             <Button 
         		Style="{DynamicResource Poly_Zurueck}"
-        		x:Name="buttonBackArticleOrder" Content="{DynamicResource WindowStart-labelBack}" Click="backArticleOrder" VerticalAlignment="Bottom" Margin="654,0,0,6" HorizontalAlignment="Left" Background="#FF8FE611" Height="33" Width="66" />
+        		x:Name="buttonBackArticleOrder" Content="{DynamicResource WindowStart-labelBack}" Click="backArticleOrder" VerticalAlignment="Bottom" Margin="654,0,0,6" HorizontalAlignment="Left" Background="#FF8FE611" Height="33" Width="66" FontFamily="Arial"/>
 
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,41,0,0" x:Name="textBoxK21" VerticalAlignment="Top" Width="64" />
             <Label Content="K21:" Height="28" HorizontalAlignment="Left" Margin="-42,39,0,0" x:Name="label1" VerticalAlignment="Top" />
@@ -1016,169 +1016,169 @@
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,70,0,0" x:Name="textBoxK22" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,70,0,0" x:Name="textBoxK22" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K22:" Height="28" HorizontalAlignment="Left" Margin="-42,68,0,0" x:Name="label2" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,713,0" x:Name="comboBoxK22" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,99,0,0" x:Name="textBoxK23" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,99,0,0" x:Name="textBoxK23" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K23:" Height="28" HorizontalAlignment="Left" Margin="-42,97,0,0" x:Name="label3" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,713,0" x:Name="comboBoxK23" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,128,0,0" x:Name="textBoxK24" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,128,0,0" x:Name="textBoxK24" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K24:" Height="28" HorizontalAlignment="Left" Margin="-42,126,0,0" x:Name="label4" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,713,0" x:Name="comboBoxK24" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,157,0,0" x:Name="textBoxK25" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,157,0,0" x:Name="textBoxK25" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K25:" Height="28" HorizontalAlignment="Left" Margin="-42,155,0,0" x:Name="label5" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,157,713,0" x:Name="comboBoxK25" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,186,0,0" x:Name="textBoxK27" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,186,0,0" x:Name="textBoxK27" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K27:" Height="28" HorizontalAlignment="Left" Margin="-42,184,0,0" x:Name="label6" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,186,713,0" x:Name="comboBoxK27" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,215,0,0" x:Name="textBoxK28" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,215,0,0" x:Name="textBoxK28" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K28:" Height="28" HorizontalAlignment="Left" Margin="-42,213,0,0" x:Name="label7" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,215,713,0" x:Name="comboBoxK28" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,244,0,0" x:Name="textBoxK32" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,244,0,0" x:Name="textBoxK32" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K32:" Height="28" HorizontalAlignment="Left" Margin="-42,242,0,0" x:Name="label8" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,244,713,0" x:Name="comboBoxK32" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,273,0,0" x:Name="textBoxK33" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,273,0,0" x:Name="textBoxK33" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K33:" Height="28" HorizontalAlignment="Left" Margin="-42,271,0,0" x:Name="label9" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,273,713,0" x:Name="comboBoxK33" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,302,0,0" x:Name="textBoxK34" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,302,0,0" x:Name="textBoxK34" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K34:" Height="28" HorizontalAlignment="Left" Margin="-42,300,0,0" x:Name="label10" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,302,713,0" x:Name="comboBoxK34" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,41,0,0" x:Name="textBoxK35" VerticalAlignment="Top" Width="64" />
-            <Label Content="K35:" Height="28" HorizontalAlignment="Left" Margin="188,39,0,0" x:Name="label11" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,41,0,0" x:Name="textBoxK35" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
+            <Label Content="K35:" Height="28" HorizontalAlignment="Left" Margin="188,39,0,0" x:Name="label11" VerticalAlignment="Top"/>
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,41,482,0" x:Name="comboBoxK35" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,70,0,0" x:Name="textBoxK36" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,70,0,0" x:Name="textBoxK36" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K36:" Height="28" HorizontalAlignment="Left" Margin="188,68,0,0" x:Name="label13" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,482,0" x:Name="comboBoxK36" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,99,0,0" x:Name="textBoxK37" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,99,0,0" x:Name="textBoxK37" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K37:" Height="28" HorizontalAlignment="Left" Margin="188,97,0,0" x:Name="label14" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,482,0" x:Name="comboBoxK37" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,128,0,0" x:Name="textBoxK38" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,128,0,0" x:Name="textBoxK38" VerticalAlignment="Top" Width="64" FontFamily="Arial" FontFamily="Arial"/>
             <Label Content="K38:" Height="28" HorizontalAlignment="Left" Margin="188,126,0,0" x:Name="label15" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,482,0" x:Name="comboBoxK38" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,157,0,0" x:Name="textBoxK39" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,157,0,0" x:Name="textBoxK39" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K39:" Height="28" HorizontalAlignment="Left" Margin="188,155,0,0" x:Name="label16" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,157,482,0" x:Name="comboBoxK39" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,186,0,0" x:Name="textBoxK40" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,186,0,0" x:Name="textBoxK40" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K40:" Height="28" HorizontalAlignment="Left" Margin="188,184,0,0" x:Name="label17" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,186,482,0" x:Name="comboBoxK40" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,215,0,0" x:Name="textBoxK41" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,215,0,0" x:Name="textBoxK41" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K41:" Height="28" HorizontalAlignment="Left" Margin="188,213,0,0" x:Name="label18" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,215,482,0" x:Name="comboBoxK41" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,244,0,0" x:Name="textBoxK42" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,244,0,0" x:Name="textBoxK42" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K42:" Height="28" HorizontalAlignment="Left" Margin="188,242,0,0" x:Name="label19" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,244,482,0" x:Name="comboBoxK42" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,273,0,0" x:Name="textBoxK43" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,273,0,0" x:Name="textBoxK43" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K43:" Height="28" HorizontalAlignment="Left" Margin="188,271,0,0" x:Name="label20" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,273,482,0" x:Name="comboBoxK43" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,302,0,0" x:Name="textBoxK44" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,302,0,0" x:Name="textBoxK44" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K44:" Height="28" HorizontalAlignment="Left" Margin="188,300,0,0" x:Name="label21" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,302,482,0" x:Name="comboBoxK44" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,41,0,0" x:Name="textBoxK45" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,41,0,0" x:Name="textBoxK45" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K45:" Height="28" HorizontalAlignment="Left" Margin="444,39,0,0" x:Name="label22" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,41,227,0" x:Name="comboBoxK45" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,70,0,0" x:Name="textBoxK46" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,70,0,0" x:Name="textBoxK46" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K46:" Height="28" HorizontalAlignment="Left" Margin="444,68,0,0" x:Name="label23" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,227,0" x:Name="comboBoxK46" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,99,0,0" x:Name="textBoxK47" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,99,0,0" x:Name="textBoxK47" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K47:" Height="28" HorizontalAlignment="Left" Margin="444,97,0,0" x:Name="label24" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,227,0" x:Name="comboBoxK47" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,128,0,0" x:Name="textBoxK48" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,128,0,0" x:Name="textBoxK48" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K48:" Height="28" HorizontalAlignment="Left" Margin="444,126,0,0" x:Name="label25" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,227,0" x:Name="comboBoxK48" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,157,0,0" x:Name="textBoxK52" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,157,0,0" x:Name="textBoxK52" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K52:" Height="28" HorizontalAlignment="Left" Margin="444,155,0,0" x:Name="label26" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,157,227,0" x:Name="comboBoxK52" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,186,0,0" x:Name="textBoxK53" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,186,0,0" x:Name="textBoxK53" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K53:" Height="28" HorizontalAlignment="Left" Margin="444,184,0,0" x:Name="label27" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,186,227,0" x:Name="comboBoxK53" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,215,0,0" x:Name="textBoxK57" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,215,0,0" x:Name="textBoxK57" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K57:" Height="28" HorizontalAlignment="Left" Margin="444,213,0,0" x:Name="label28" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,215,227,0" x:Name="comboBoxK57" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,244,0,0" x:Name="textBoxK58" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,244,0,0" x:Name="textBoxK58" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K58:" Height="28" HorizontalAlignment="Left" Margin="444,242,0,0" x:Name="label29" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,244,227,0" x:Name="comboBoxK58" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,273,0,0" x:Name="textBoxK59" VerticalAlignment="Top" Width="64" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="476,273,0,0" x:Name="textBoxK59" VerticalAlignment="Top" Width="64" FontFamily="Arial"/>
             <Label Content="K59:" Height="28" HorizontalAlignment="Left" Margin="444,271,0,0" x:Name="label30" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,273,227,0" x:Name="comboBoxK59" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
@@ -1462,7 +1462,7 @@
 
         </Grid>
         <Separator Height="8" HorizontalAlignment="Left" Margin="12,0,0,109" x:Name="separator2_Copy" VerticalAlignment="Bottom" Width="885" Grid.ColumnSpan="5" />
-        <Image HorizontalAlignment="Left" Height="55" Margin="8,335,0,0" VerticalAlignment="Top" Width="287" Source="Resources/bike_tec_logo.png" Grid.ColumnSpan="3" Grid.Row="1">
+        <Image HorizontalAlignment="Left" Height="55" Margin="8,335,0,0" VerticalAlignment="Top" Width="287" Source="Resources/bikenride.jpg" Grid.ColumnSpan="3" Grid.Row="1">
             <Image.ContextMenu>
                 <ContextMenu/>
             </Image.ContextMenu>
