@@ -24,7 +24,6 @@ namespace Tool
 
             foreach (Kaufteil k in data.KaufteilList)
             {
-                Console.WriteLine(k.Nummer.ToString() + ": "+k.Lagerstand);
                 Boolean eilBestellung = false;
 
                 // Nichts bestellen in Periode 0

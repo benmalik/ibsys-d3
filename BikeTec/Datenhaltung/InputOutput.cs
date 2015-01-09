@@ -101,27 +101,24 @@ namespace Tool
                     {
                         case "results":
 
-                            Console.WriteLine("wir sind in results: "+ reader.Name);
                             break;
                         case "warehousestock":
                             if (reader.Name == "article") {
-                                Console.WriteLine("wir sind in warehousestock " + reader.Name);
                                 t = instance.GetTeil(Convert.ToInt32(reader.GetAttribute(0)));
-                                t.Lagerstand = Convert.ToInt32(reader.GetAttribute(2));
+                                t.Lagerstand = Convert.ToInt32(reader.GetAttribute(1));
                                 t.Lagerpreis = Convert.ToDouble(reader.GetAttribute(4));
                             }
                             break;
                         case "futureinwardstockmovement":
                             if (reader.Name == "order")
                             {
-                                Console.WriteLine("wir sind in futureinwardstockmovement: " + reader.Name);
                                 int teilnr = Convert.ToInt32(reader.GetAttribute(3));
 
                                 (instance.GetTeil(teilnr) as Kaufteil).ErwarteteBestellung = Convert.ToInt32(reader.GetAttribute(4)) + (instance.GetTeil(teilnr) as Kaufteil).ErwarteteBestellung;
 
                                 Kaufteil kaufds = instance.GetTeil(teilnr) as Kaufteil;
 
-                                if (reader.GetAttribute(1) == "Normal")
+                                if (reader.GetAttribute(2) == "5")
                                 {
                                     intOrderMode = 5;
                                 }
@@ -130,13 +127,13 @@ namespace Tool
                                     intOrderMode = 4; //Fast
                                 }
 
-                                kaufds.addBestellung(instance.AktuellePeriode, Convert.ToInt32(reader.GetAttribute(0).Substring(0, 1)), intOrderMode, Convert.ToInt32(reader.GetAttribute(4)));
+                                kaufds.addBestellung(instance.AktuellePeriode, Convert.ToInt32(reader.GetAttribute(0)), intOrderMode, Convert.ToInt32(reader.GetAttribute(4)));
                             }
                             break;
                         case "idletimecosts":
                             if (reader.Name == "workplace")
                             {
-                                Console.WriteLine("wir sind in idletimecosts: " + reader.Name);
+
                             }
                             break;
                         case "waitinglistworkstations":
@@ -153,7 +150,6 @@ namespace Tool
 
                             }
                             if (reader.Name == "waitinglist") {
-                                Console.WriteLine("wir sind in waitinglistworkstations: " + reader.Name);
                                 ap = instance.GetArbeitsplatz(arbeitsplatzID);
                             //Todo:
                                // intLastSpacePos = reader.GetAttribute(4).LastIndexOf(" ") + 1;
@@ -167,10 +163,8 @@ namespace Tool
                         case "waitingliststock":
                             if (reader.Name == "waitinglist")
                             {
-                                Console.WriteLine("wir sind in waitingliststock: " + reader.Name);
-                                intLastSpacePos = reader.GetAttribute(0).LastIndexOf(" ") + 1;
                                 //Debug.WriteLine(reader.GetAttribute(0).Substring(intLastSpacePos));
-                                t = instance.GetTeil(Convert.ToInt32(reader.GetAttribute(0).Substring(intLastSpacePos)));
+                                t = instance.GetTeil(Convert.ToInt32(reader.GetAttribute(4)));
                                 //t.Lagerstand -= Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5)));
                                 t.Warteschlange += Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5)));
                             }
@@ -181,14 +175,13 @@ namespace Tool
                             if (reader.Name == "workplace")
                             {
                                 ap = instance.GetArbeitsplatz(Convert.ToInt32(reader.GetAttribute(0)));
-                                intLastSpacePos = reader.GetAttribute(4).LastIndexOf(" ") + 1;
-                                ap.AddAuftraegeInBearbeitung(Convert.ToInt32(reader.GetAttribute(4).Substring(intLastSpacePos)), Convert.ToInt32(reader.GetAttribute(5)), Convert.ToInt32(reader.GetAttribute(6)));
+                                ap.AddAuftraegeInBearbeitung(Convert.ToInt32(reader.GetAttribute(4)), Convert.ToInt32(reader.GetAttribute(5)), Convert.ToInt32(reader.GetAttribute(6)));
 
                             }
                             break;
                             
                         default:
-                            Console.WriteLine("default case: " + reader.Name);
+
                             break;
 
                     }
