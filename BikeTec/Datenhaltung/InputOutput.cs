@@ -49,120 +49,150 @@ namespace Tool
             Teil t;
 
             Arbeitsplatz ap = instance.GetArbeitsplatz(1);
+            int arbeitsplatzID = 0;
+
+            String currentXMLNode = "";
 
             while (reader.Read())
             {
 
                 switch (reader.Name)
                 {
-                    case "PeriodResults":
+                    case "results":
+                        currentXMLNode = "results";
                         if (instance.AktuellePeriode == -1)
                             instance.AktuellePeriode = Convert.ToInt32(reader.GetAttribute("period")) + 1;
                         break;
 
-                    case "WarehouseStock":
-                        switchWarehouseStock = !switchWarehouseStock;
+                    case "warehousestock":
+                        currentXMLNode = "warehousestock";
                         break;
 
-                    case "FutureInwardStockMovements":
-                        //switchWarehousestock = !switchWarehousestock;
-                        switchFutureInwardStockMovement = !switchFutureInwardStockMovement;
+                    case "futureinwardstockmovement":
+                        currentXMLNode = "futureinwardstockmovement";
                         break;
 
-                    case "WorkplaceCosts":
-                        switchWorkplace = !switchWorkplace;
+                    case "idletimecosts":
+                        currentXMLNode = "idletimecosts";
                         break;
 
-                    case "WorkplaceWaitinglist":
-                        switchWaitingListWPL = !switchWaitingListWPL;
-
-                        //if (reader.NodeType == XmlNodeType.EndElement)
-                        //{
-                        //    break;
-                        //}
+                    case "waitinglistworkstations":
+                        currentXMLNode = "waitinglistworkstations";
                         break;
 
-                    case "StockWaitinglist":
+                    case "waitingliststock":
+                        currentXMLNode = "waitingliststock";
                         switchWaitingListStock = !switchWaitingListStock;
                         break;
 
-                    case "OrdersBeeingProcessed":
+                    case "ordersinwork":
+                        currentXMLNode = "ordersinwork";
                         //switchWaitinglist = !switchWaitinglist;
                         switchOrdersInWork = !switchOrdersInWork;
                         break;
 
-                    case "ProcessedOrders":
+                    case "completedorders":
+                        currentXMLNode = "completedorders";
                         //switchOrdersInWork = !switchOrdersInWork;
                         break;
 
-                    case "Entry":
-                        if (switchWarehouseStock)
-                        {
-                            intLastSpacePos = reader.GetAttribute(0).LastIndexOf(" ") + 1;
-                            t = instance.GetTeil(Convert.ToInt32(reader.GetAttribute(0).Substring(intLastSpacePos)));
-                            t.Lagerstand = Convert.ToInt32(reader.GetAttribute(2));
-                            t.Lagerpreis = Convert.ToDouble(reader.GetAttribute(4));
+                    default:
+                    switch (currentXMLNode)
+                    {
+                        case "results":
+
+                            Console.WriteLine("wir sind in results: "+ reader.Name);
                             break;
-                        }
-                        if (switchFutureInwardStockMovement)
-                        {
-                            int teilnr = Convert.ToInt32(reader.GetAttribute(3));
-
-                            (instance.GetTeil(teilnr) as Kaufteil).ErwarteteBestellung = Convert.ToInt32(reader.GetAttribute(4)) + (instance.GetTeil(teilnr) as Kaufteil).ErwarteteBestellung;
-
-                            Kaufteil kaufds = instance.GetTeil(teilnr) as Kaufteil;
-
-                            if (reader.GetAttribute(1) == "Normal")
-                            {
-                                intOrderMode = 5;
+                        case "warehousestock":
+                            if (reader.Name == "article") {
+                                Console.WriteLine("wir sind in warehousestock " + reader.Name);
+                                t = instance.GetTeil(Convert.ToInt32(reader.GetAttribute(0)));
+                                t.Lagerstand = Convert.ToInt32(reader.GetAttribute(2));
+                                t.Lagerpreis = Convert.ToDouble(reader.GetAttribute(4));
                             }
-                            else
+                            break;
+                        case "futureinwardstockmovement":
+                            if (reader.Name == "order")
                             {
-                                intOrderMode = 4; //Fast
+                                Console.WriteLine("wir sind in futureinwardstockmovement: " + reader.Name);
+                                int teilnr = Convert.ToInt32(reader.GetAttribute(3));
+
+                                (instance.GetTeil(teilnr) as Kaufteil).ErwarteteBestellung = Convert.ToInt32(reader.GetAttribute(4)) + (instance.GetTeil(teilnr) as Kaufteil).ErwarteteBestellung;
+
+                                Kaufteil kaufds = instance.GetTeil(teilnr) as Kaufteil;
+
+                                if (reader.GetAttribute(1) == "Normal")
+                                {
+                                    intOrderMode = 5;
+                                }
+                                else
+                                {
+                                    intOrderMode = 4; //Fast
+                                }
+
+                                kaufds.addBestellung(instance.AktuellePeriode, Convert.ToInt32(reader.GetAttribute(0).Substring(0, 1)), intOrderMode, Convert.ToInt32(reader.GetAttribute(4)));
                             }
-
-                            kaufds.addBestellung(instance.AktuellePeriode, Convert.ToInt32(reader.GetAttribute(0).Substring(0, 1)), intOrderMode, Convert.ToInt32(reader.GetAttribute(4)));
                             break;
-                        }
-
-                        if (switchWorkplace)
-                        {
-                            //ap = instance.GetArbeitsplatz(Convert.ToInt32(reader.GetAttribute(0)));
+                        case "idletimecosts":
+                            if (reader.Name == "workplace")
+                            {
+                                Console.WriteLine("wir sind in idletimecosts: " + reader.Name);
+                            }
                             break;
-                        }
+                        case "waitinglistworkstations":
+                            if (reader.Name == "workplace")
+                            {
+                                try
+                                {
+                                    arbeitsplatzID = Convert.ToInt32(reader.GetAttribute(0));
+                                }
+                                catch (Exception)
+                                {
+                                    //nö jetzt nicht
+                                }
 
-                        if (switchWaitingListWPL)
-                        {
-                            ap = instance.GetArbeitsplatz(Convert.ToInt32(reader.GetAttribute(0)));
-                            intLastSpacePos = reader.GetAttribute(4).LastIndexOf(" ") + 1;
-                            //Debug.WriteLine(reader.GetAttribute(2));
-                            //Debug.WriteLine(Convert.ToInt32(reader.GetAttribute(4).Substring(intLastSpacePos)));
-                            //Debug.WriteLine(Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5))));
-                            ap.AddWarteschlange(Convert.ToInt32(reader.GetAttribute(4).Substring(intLastSpacePos)), Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5))));
+                            }
+                            if (reader.Name == "waitinglist") {
+                                Console.WriteLine("wir sind in waitinglistworkstations: " + reader.Name);
+                                ap = instance.GetArbeitsplatz(arbeitsplatzID);
+                            //Todo:
+                               // intLastSpacePos = reader.GetAttribute(4).LastIndexOf(" ") + 1;
+                                //Debug.WriteLine(reader.GetAttribute(2));
+                                //Debug.WriteLine(Convert.ToInt32(reader.GetAttribute(4).Substring(intLastSpacePos)));
+                                //Debug.WriteLine(Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5))));
+                                ap.AddWarteschlange(Convert.ToInt32(reader.GetAttribute(4)), Convert.ToInt32(reader.GetAttribute(5)));
+                                //ap.AddWarteschlange(Convert.ToInt32(reader.GetAttribute(4).Substring(intLastSpacePos)), Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5))));
+                            }
                             break;
-                        }
-
-                        if (switchWaitingListStock)
-                        {
-                            intLastSpacePos = reader.GetAttribute(0).LastIndexOf(" ") + 1;
-                            //Debug.WriteLine(reader.GetAttribute(0).Substring(intLastSpacePos));
-                            t = instance.GetTeil(Convert.ToInt32(reader.GetAttribute(0).Substring(intLastSpacePos)));
-                            //t.Lagerstand -= Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5)));
-                            t.Warteschlange += Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5)));
+                        case "waitingliststock":
+                            if (reader.Name == "waitinglist")
+                            {
+                                Console.WriteLine("wir sind in waitingliststock: " + reader.Name);
+                                intLastSpacePos = reader.GetAttribute(0).LastIndexOf(" ") + 1;
+                                //Debug.WriteLine(reader.GetAttribute(0).Substring(intLastSpacePos));
+                                t = instance.GetTeil(Convert.ToInt32(reader.GetAttribute(0).Substring(intLastSpacePos)));
+                                //t.Lagerstand -= Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5)));
+                                t.Warteschlange += Convert.ToInt32(Convert.ToDouble(reader.GetAttribute(5)));
+                            }
                             break;
-                        }
 
-                        if (switchOrdersInWork)
-                        {
-                            ap = instance.GetArbeitsplatz(Convert.ToInt32(reader.GetAttribute(0)));
-                            intLastSpacePos = reader.GetAttribute(4).LastIndexOf(" ") + 1;
-                            ap.AddAuftraegeInBearbeitung(Convert.ToInt32(reader.GetAttribute(4).Substring(intLastSpacePos)), Convert.ToInt32(reader.GetAttribute(5)), Convert.ToInt32(reader.GetAttribute(6)));
+
+                         case "ordersinwork":
+                            if (reader.Name == "workplace")
+                            {
+                                ap = instance.GetArbeitsplatz(Convert.ToInt32(reader.GetAttribute(0)));
+                                intLastSpacePos = reader.GetAttribute(4).LastIndexOf(" ") + 1;
+                                ap.AddAuftraegeInBearbeitung(Convert.ToInt32(reader.GetAttribute(4).Substring(intLastSpacePos)), Convert.ToInt32(reader.GetAttribute(5)), Convert.ToInt32(reader.GetAttribute(6)));
+
+                            }
                             break;
-                        }
+                            
+                        default:
+                            Console.WriteLine("default case: " + reader.Name);
+                            break;
 
-                        break;
-
-
+                    }
+                    break;
                 }
 
             }
@@ -180,7 +210,7 @@ namespace Tool
             CreateOrResetFile();
 
             //Dateianfang
-            WriteFile("<PeriodInput>");
+            WriteFile("<input>");
 
             WriteVerkaufswuensche();
             WriteBestellungen();
@@ -192,7 +222,7 @@ namespace Tool
             //WriteFile("<IsQualityControlEnabled>false</IsQualityControlEnabled>");
 
             //Dateiende
-            WriteFile("</PeriodInput>");
+            WriteFile("</input>");
         }
 
         //Datei erstellen. Wenn bereits vorhanden, Inhalt loeschen

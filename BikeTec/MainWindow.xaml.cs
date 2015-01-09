@@ -668,7 +668,7 @@ namespace BikeTec
             dc = DataContainer.Instance;
 
             foreach (Bestellposition bp in dc.Bestellung)
-            {
+            {    
                 fillTextBoxesWithOrderData(bp);
             }
             buttonValidation.Visibility = System.Windows.Visibility.Visible;
