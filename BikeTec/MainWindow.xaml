@@ -61,13 +61,15 @@
             </controls:WizardProgressBar>
             -->
 
-        <Label Content="{DynamicResource WindowStart-labelWILLKOMMEN}" Height="30" FontSize="12" Margin="18,7,0,0" x:Name="labelWILLKOMMEN" Visibility="Visible" Grid.ColumnSpan="3" Width="131" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
-        <Label Content="{DynamicResource WindowStart-labelINPUT}" Height="30" FontSize="12" Margin="47,7,0,0" x:Name="labelINPUT" Grid.Column="2" Width="134" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" FontFamily="Arial" />
-        <Label Content="{DynamicResource WindowStart-labelVERKAUFSPROGNOSE}" Height="30" FontSize="12" Margin="181,7,0,0" x:Name="labelVERKAUFSPROGNOSE" Grid.Column="2" Width="132" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
-        <Label Content="{DynamicResource WindowStart-labelPUFFER}" Height="30" FontSize="12" Margin="313,7,0,0" x:Name="labelPUFFER" Grid.Column="2" Grid.ColumnSpan="2" Width="132" BorderThickness="2" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
-        <Label Content="{DynamicResource WindowStart-labelNACHBESTELLUNG}" Height="30" FontSize="12" Margin="48,7,0,0" x:Name="labelNACHBESTELLUNG" Grid.Column="3" BorderThickness="2" Width="106" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Arial" />
-        <Label Content="{DynamicResource WindowStart-labelSCHICHT}" Height="30" FontSize="12" Margin="70,7,0,0" x:Name="labelSCHICHT" Grid.Column="4" BorderThickness="2" Width="95" BorderBrush="#FF858585" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial"/>
-        <Label Content="{DynamicResource WindowStart-labelZUSAMMENFASSUNG}" Height="30" FontSize="12" Margin="165,7,0,0" x:Name="labelZUSAMMENFASSUNG" Grid.Column="5" Background="{x:Null}" BorderBrush="#FF858585" BorderThickness="2" Width="74" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial" />
+        <Label Content="{DynamicResource WindowStart-labelWILLKOMMEN}" Height="34" FontSize="14" Margin="18,7,0,0" x:Name="labelWILLKOMMEN" Visibility="Visible" Grid.ColumnSpan="3" Width="131" BorderThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Light" Background="#FF666666" Foreground="White" BorderBrush="#FF666666" FontWeight="Bold"/>
+        <Label Content="{DynamicResource WindowStart-labelINPUT}" Height="34
+               " FontSize="14" Margin="47,7,0,0" x:Name="labelINPUT" Grid.Column="2" Width="134" BorderThickness="2" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" d:IsLocked="True" FontFamily="Segoe UI Light" Background="#FF666666" Foreground="White" BorderBrush="#FF666666"/>
+        <Label Content="{DynamicResource WindowStart-labelVERKAUFSPROGNOSE}" Height="34" FontSize="14" Margin="181,7,0,0" x:Name="labelVERKAUFSPROGNOSE" Grid.Column="2" Width="132" BorderThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Light" Background="#FF666666" Foreground="White" BorderBrush="#FF666666"/>
+        <Label Content="{DynamicResource WindowStart-labelPUFFER}" Height="34" FontSize="14" Margin="313,7,0,0" x:Name="labelPUFFER" Grid.Column="2" Grid.ColumnSpan="2" Width="132" BorderThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Light" Background="#FF666666" Foreground="White" BorderBrush="#FF666666"/>
+        <Label Content="{DynamicResource WindowStart-labelNACHBESTELLUNG}" Height="34" FontSize="14" Margin="48,7,0,0" x:Name="labelNACHBESTELLUNG" Grid.Column="3" BorderThickness="2" Width="106" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Segoe UI Light" Background="#FF666666" Foreground="White" BorderBrush="#FF666666"/>
+        <Label Content="{DynamicResource WindowStart-labelSCHICHT}" Height="34" FontSize="14" Margin="70,7,0,0" x:Name="labelSCHICHT" Grid.Column="4" BorderThickness="2" Width="95" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Light" Background="#FF666666" Foreground="White" BorderBrush="#FF666666"/>
+        <Label Content="{DynamicResource WindowStart-labelZUSAMMENFASSUNG}" Height="34" FontSize="14" Margin="165,7,0,0" x:Name="labelZUSAMMENFASSUNG" Grid.Column="4" BorderThickness="2" Width="74" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Segoe UI Light" Background="#FF666666" Foreground="White" BorderBrush="#FF666666"/>
 
         <!-- DATENIMPORT -->
         <Grid x:Name="DragDropGrid" Margin="0,46,0,-4" Grid.RowSpan="2" Grid.ColumnSpan="5" Visibility="Hidden">
@@ -1088,7 +1090,7 @@
                 <ComboBoxItem Content="Normal" />
                 <ComboBoxItem Content="Schnell" />
             </ComboBox>
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,128,0,0" x:Name="textBoxK38" VerticalAlignment="Top" Width="64" FontFamily="Arial" FontFamily="Arial"/>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,128,0,0" x:Name="textBoxK38" VerticalAlignment="Top" Width="64" FontFamily="Arial" />
             <Label Content="K38:" Height="28" HorizontalAlignment="Left" Margin="188,126,0,0" x:Name="label15" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,482,0" x:Name="comboBoxK38" SelectedIndex="0" VerticalAlignment="Top" Width="67">
                 <ComboBoxItem Content="Normal" />
@@ -1462,7 +1464,7 @@
 
         </Grid>
         <Separator Height="8" HorizontalAlignment="Left" Margin="12,0,0,109" x:Name="separator2_Copy" VerticalAlignment="Bottom" Width="885" Grid.ColumnSpan="5" />
-        <Image HorizontalAlignment="Left" Height="55" Margin="8,335,0,0" VerticalAlignment="Top" Width="287" Source="Resources/bikenride.jpg" Grid.ColumnSpan="3" Grid.Row="1">
+        <Image HorizontalAlignment="Left" Height="80" Margin="10,310,0,0" VerticalAlignment="Top" Width="150" Source="Resources/bikenridesmall.png" Grid.ColumnSpan="3" Grid.Row="1">
             <Image.ContextMenu>
                 <ContextMenu/>
             </Image.ContextMenu>

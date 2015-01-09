@@ -166,7 +166,10 @@
     <Resource Include="bike_tec_logo_small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\bikenride.jpg" />
+    <Resource Include="Resources\bikenride.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bikenridesmall.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

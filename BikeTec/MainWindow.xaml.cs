@@ -44,13 +44,14 @@ namespace BikeTec
             Stammdaten init = new Stammdaten();
             init.Initialisieren();
             this.DataContext = this;
-            labelWILLKOMMEN.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+
             ChangeLanguage("de-DE");
 
         }
@@ -148,13 +149,13 @@ namespace BikeTec
             ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
             DragDropGrid.Visibility = System.Windows.Visibility.Visible;
 
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
 
         }
 
@@ -313,13 +314,13 @@ namespace BikeTec
             Progress = 15;
             welcomeText.Visibility = System.Windows.Visibility.Visible;
             DragDropGrid.Visibility = System.Windows.Visibility.Hidden;
-            labelWILLKOMMEN.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
         }
 
         void backForecast(object sender, RoutedEventArgs e)
@@ -361,14 +362,13 @@ namespace BikeTec
             //ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
             SchichtGrid.Visibility = System.Windows.Visibility.Hidden;
 
-            outputGrid.Visibility = System.Windows.Visibility.Hidden;
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
         }
 
         /* //////////////
@@ -383,13 +383,13 @@ namespace BikeTec
             bufferGrid.Visibility = System.Windows.Visibility.Hidden;
             ForecastGrid.Visibility = System.Windows.Visibility.Visible;
 
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
 
             //TODO: new Prognoseeingabe().Show();
         }
@@ -407,13 +407,13 @@ namespace BikeTec
             ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Hidden;
             bufferGrid.Visibility = System.Windows.Visibility.Visible;
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
 
             berechneVerbrauch();
         }
@@ -431,13 +431,13 @@ namespace BikeTec
             //ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
             SchichtGrid.Visibility = System.Windows.Visibility.Visible;
             ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
             //TODO: new Prognoseeingabe().Show();
         }
 
@@ -488,13 +488,13 @@ namespace BikeTec
             SchichtGrid.Visibility = System.Windows.Visibility.Hidden;
 
             ergebnisGrid.Visibility = System.Windows.Visibility.Visible;
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = (Brush)bc.ConvertFrom("#FF7FD009");
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
 
             //fillChart();
             berechneSchicht();
@@ -566,13 +566,13 @@ namespace BikeTec
             bufferGrid.Visibility = System.Windows.Visibility.Hidden;
             outputGrid.Visibility = System.Windows.Visibility.Hidden;
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Visible;
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelSCHICHT.Background = null;
-            labelZUSAMMENFASSUNG.Background = null;
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
         }
 
         bool checkInput()
@@ -691,13 +691,14 @@ namespace BikeTec
             SchichtGrid.Visibility = System.Windows.Visibility.Visible;
             //ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
 
-            labelWILLKOMMEN.Background = null;
-            labelINPUT.Background = null;
-            labelVERKAUFSPROGNOSE.Background = null;
-            labelPUFFER.Background = null;
-            labelNACHBESTELLUNG.Background = null;
-            labelSCHICHT.Background = (Brush)bc.ConvertFrom("#FF7FD009");
-            labelZUSAMMENFASSUNG.Background = null;
+
+            labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelINPUT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelVERKAUFSPROGNOSE.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelPUFFER.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
+            labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
+            labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
 
             writeUserOdersToDcOrderList();
 

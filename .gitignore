@@ -1,1 +1,14 @@
-bin/
+BikeTec/bin/*
+BikeTec/obj/Debug/*
+BikeTec/obj/Debug/MainWindow.g.cs
+BikeTec/obj/Debug/MainWindow.g.i.cs
+BikeTec/obj/Debug/MainWindow.baml
+BikeTec/obj/Debug/BikeTec_Content.g.i.cs
+BikeTec/obj/Debug/BikeTec.pdb
+BikeTec/obj/Debug/BikeTec.g.resources
+BikeTec/obj/Debug/BikeTec.exe
+BikeTec/obj/Debug/BikeTec.exe
+BikeTec/obj/Debug/MainWindow.g.i.cs
+BikeTec/obj/Debug/MainWindow.g.cs
+BikeTec/obj/Debug/MainWindow.baml
+BikeTec/obj/Debug/MainWindow.baml
