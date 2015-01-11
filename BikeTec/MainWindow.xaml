@@ -1385,37 +1385,30 @@
                 <ComboBoxItem Content="2" />
                 <ComboBoxItem Content="3" />
             </ComboBox>
-
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,41,0,0" x:Name="textBoxAP12" VerticalAlignment="Top" Width="64" />
             <Label Content="AP12:" Height="28" HorizontalAlignment="Left" Margin="188,39,0,0" x:Name="labelAP12" VerticalAlignment="Top" />
-            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="224,39,0,0" x:Name="labelAP12z" VerticalAlignment="Top" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="306,41,0,0" x:Name="textBoxAP12" VerticalAlignment="Top" Width="48" />
-            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,41,524,0" x:Name="comboBoxAP12" VerticalAlignment="Top" Width="34" SelectedIndex="0">
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,41,482,0" x:Name="comboBoxAP12" VerticalAlignment="Top" Width="34" SelectedIndex="0">
                 <ComboBoxItem Content="1" />
                 <ComboBoxItem Content="2" />
                 <ComboBoxItem Content="3" />
             </ComboBox>
-
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,70,0,0" x:Name="textBoxAP13" VerticalAlignment="Top" Width="64" />
             <Label Content="AP13:" Height="28" HorizontalAlignment="Left" Margin="188,68,0,0" x:Name="labelAP13" VerticalAlignment="Top" />
-            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="224,68,0,0" x:Name="labelAP13z" VerticalAlignment="Top" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="306,70,0,0" x:Name="textBoxAP13" VerticalAlignment="Top" Width="48" />
-            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,524,0" x:Name="comboBoxAP13" VerticalAlignment="Top" Width="34" SelectedIndex="0">
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,482,0" x:Name="comboBoxAP13" VerticalAlignment="Top" Width="34" SelectedIndex="0">
                 <ComboBoxItem Content="1" />
                 <ComboBoxItem Content="2" />
                 <ComboBoxItem Content="3" />
             </ComboBox>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,99,0,0" x:Name="textBoxAP14" VerticalAlignment="Top" Width="64" />
             <Label Content="AP14:" Height="28" HorizontalAlignment="Left" Margin="188,97,0,0" x:Name="labelAP14" VerticalAlignment="Top" />
-            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="224,97,0,0" x:Name="labelAP14z" VerticalAlignment="Top" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="306,99,0,0" x:Name="textBoxAP14" VerticalAlignment="Top" Width="48" />
-            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,524,0" x:Name="comboBoxAP14" VerticalAlignment="Top" Width="34" SelectedIndex="0">
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,482,0" x:Name="comboBoxAP14" VerticalAlignment="Top" Width="34" SelectedIndex="0">
                 <ComboBoxItem Content="1" />
                 <ComboBoxItem Content="2" />
                 <ComboBoxItem Content="3" />
             </ComboBox>
-
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="222,128,0,0" x:Name="textBoxAP15" VerticalAlignment="Top" Width="64" />
             <Label Content="AP15:" Height="28" HorizontalAlignment="Left" Margin="188,126,0,0" x:Name="labelAP15" VerticalAlignment="Top" />
-            <Label Content="" Height="28" HorizontalAlignment="Left" Margin="224,126,0,0" x:Name="labelAP15z" VerticalAlignment="Top" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="306,128,0,0" x:Name="textBoxAP15" VerticalAlignment="Top" Width="48" />
-            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,524,0" x:Name="comboBoxAP15" VerticalAlignment="Top" Width="34" SelectedIndex="0">
+            <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,482,0" x:Name="comboBoxAP15" VerticalAlignment="Top" Width="34" SelectedIndex="0">
                 <ComboBoxItem Content="1" />
                 <ComboBoxItem Content="2" />
                 <ComboBoxItem Content="3" />

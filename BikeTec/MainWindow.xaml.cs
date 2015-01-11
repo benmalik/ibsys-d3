@@ -896,10 +896,10 @@ namespace BikeTec
             labelAP9z.Content = dc.GetArbeitsplatz(9).BenoetigteZeit;
             labelAP10z.Content = dc.GetArbeitsplatz(10).BenoetigteZeit;
             labelAP11z.Content = dc.GetArbeitsplatz(11).BenoetigteZeit;
-            labelAP12z.Content = dc.GetArbeitsplatz(12).BenoetigteZeit;
-            labelAP13z.Content = dc.GetArbeitsplatz(13).BenoetigteZeit;
-            labelAP14z.Content = dc.GetArbeitsplatz(14).BenoetigteZeit;
-            labelAP15z.Content = dc.GetArbeitsplatz(15).BenoetigteZeit;
+            //labelAP12z.Content = dc.GetArbeitsplatz(12).BenoetigteZeit;
+            //labelAP13z.Content = dc.GetArbeitsplatz(13).BenoetigteZeit;
+            //labelAP14z.Content = dc.GetArbeitsplatz(14).BenoetigteZeit;
+            //labelAP15z.Content = dc.GetArbeitsplatz(15).BenoetigteZeit;
 
 
 
