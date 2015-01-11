@@ -1,4 +1,4 @@
-﻿<Window x:Class="BikeTec.MainWindow" Icon="bike_tec_logo_small.ico"
+﻿<Window x:Class="BikeTec.MainWindow" Icon="bikenridesmall.ico"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="{DynamicResource WindowStart-Title}" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -47,11 +47,6 @@
         		Height="271"
         		Content="Herzlich Willkommen im BikeTec Produktionsplanungs- und Steuerungssystem!&#xA; &#xA;Das integrierte Tool bieten Ihnen eine optimale Unterstützung bei der  Planung des Produktionsprogramms für&#xA;die nächste Periode. Nach der  Eingabe Ihres Vertriebswunschs für die kommende Periode führt das Tool&#xA;eine umfassende Planung des Produktionsprogramms durch. Neben der  Produktionsplanung schlägt Ihnen das&#xA;Tool auch eine optimale Bestellmenge  der einzelnen Kaufteile vor.  Die Anwendung führt Sie einfach durch die&#xA;einzelnen  Prozessschritte und erklärt jeweils kurz, welche Entscheidungen Sie zu treffen haben. &#xA;&#xA;Zum Start der Anwendung bitte auf &quot;Weiter&quot; klicken." />
             <Button Style="{DynamicResource Poly_Weiter}" Content="{DynamicResource WindowStart-labelNext}" Click="selectFile" Margin="0,0,-60,52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" Grid.Column="2" />
-            <!--<Image HorizontalAlignment="Left" Height="140" Margin="218,39,0,0" VerticalAlignment="Top" Width="536" Source="Resources/bike_tec_logo.png">
-                <Image.ContextMenu>
-                    <ContextMenu/>
-                </Image.ContextMenu>
-            </Image>-->
         </Grid>
 
         <!-- Progress Bar
