@@ -885,6 +885,27 @@ namespace BikeTec
             textBoxAP15.Text = Convert.ToString(dc.GetArbeitsplatz(15).UeberMin);
             comboBoxAP15.SelectedIndex = dc.GetArbeitsplatz(15).Schichten - 1;
 
+
+            labelAP1z.Content = dc.GetArbeitsplatz(1).BenoetigteZeit;
+            labelAP2z.Content = dc.GetArbeitsplatz(2).BenoetigteZeit;
+            labelAP3z.Content = dc.GetArbeitsplatz(3).BenoetigteZeit;
+            labelAP4z.Content = dc.GetArbeitsplatz(4).BenoetigteZeit;
+            labelAP6z.Content = dc.GetArbeitsplatz(6).BenoetigteZeit;
+            labelAP7z.Content = dc.GetArbeitsplatz(7).BenoetigteZeit;
+            labelAP8z.Content = dc.GetArbeitsplatz(8).BenoetigteZeit;
+            labelAP9z.Content = dc.GetArbeitsplatz(9).BenoetigteZeit;
+            labelAP10z.Content = dc.GetArbeitsplatz(10).BenoetigteZeit;
+            labelAP11z.Content = dc.GetArbeitsplatz(11).BenoetigteZeit;
+            //labelAP12z.Content = dc.GetArbeitsplatz(12).BenoetigteZeit;
+            //labelAP13z.Content = dc.GetArbeitsplatz(13).BenoetigteZeit;
+            //labelAP14z.Content = dc.GetArbeitsplatz(14).BenoetigteZeit;
+            //labelAP15z.Content = dc.GetArbeitsplatz(15).BenoetigteZeit;
+
+
+
+
+
+
             E13.Text = Convert.ToString("E13: " + (dc.GetTeil(13) as ETeil).Produktionsmenge);
             ToolTipService.SetToolTip(E13, Stammdaten.TBez.GetValue(13 - 1));
             E14.Text = Convert.ToString("E14: " + (dc.GetTeil(14) as ETeil).Produktionsmenge);
