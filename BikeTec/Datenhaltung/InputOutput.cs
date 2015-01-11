@@ -38,13 +38,7 @@ namespace Tool
 
             }
 
-            bool switchWarehouseStock = false;              //Schalter für Lagereinlesen
-            bool switchFutureInwardStockMovement = false;   //Schalter für zukünftigen Wareneingang
-            bool switchWaitingListWPL = false;              //Schalter für Waitinglist Workstations
-            bool switchWaitingListStock = false;            //Schalter für Waitinglist Stock
-            bool switchOrdersInWork = false;                //Schalter für OrdersinWork
-            bool switchWorkplace = false;                   //Schalter für Arbeitsplätze
-            int intLastSpacePos;                            //Speichert das letzte Vorkommen eines Leerzeichens von Entry    
+  
             int intOrderMode;                               //Bestellmodus
             Teil t;
 
@@ -82,18 +76,14 @@ namespace Tool
 
                     case "waitingliststock":
                         currentXMLNode = "waitingliststock";
-                        switchWaitingListStock = !switchWaitingListStock;
                         break;
 
                     case "ordersinwork":
                         currentXMLNode = "ordersinwork";
-                        //switchWaitinglist = !switchWaitinglist;
-                        switchOrdersInWork = !switchOrdersInWork;
                         break;
 
                     case "completedorders":
                         currentXMLNode = "completedorders";
-                        //switchOrdersInWork = !switchOrdersInWork;
                         break;
 
                     default:
@@ -206,6 +196,7 @@ namespace Tool
             WriteFile("<input>");
 
             WriteVerkaufswuensche();
+            WriteDirektVerkauf();
             WriteBestellungen();
             WriteProduktionsauftraege();
             WriteArbeitsplaetze();
@@ -236,7 +227,7 @@ namespace Tool
                 ETeil et = instance.GetTeil(i) as ETeil;
 
                 //WriteFile("<salesWish>");
-                WriteFile("<item article =\"" + i + "\" quantity =\"" + et.VerbrauchAktuell + "\" />");
+                WriteFile("<item article =\"" + i + "\" quantity =\"" + (et.VerbrauchAktuell-et.DirektVerkauf) + "\" />");
                 //WriteFile("<SaleQuantity>" + et.VerbrauchAktuell + "</SaleQuantity>");
                 // WriteFile("<DirectSaleQuantity>" + "0" + "</DirectSaleQuantity>");
                 //WriteFile("<DirectSalePrice>" + "0.0" + "</DirectSalePrice>");
@@ -245,6 +236,20 @@ namespace Tool
             }
 
             WriteFile("</sellwish>");
+
+        }
+
+        private static void WriteDirektVerkauf()
+        {
+            WriteFile("<selldirect>");
+
+            for (int i = 1; i < 4; ++i)
+            {
+                ETeil et = instance.GetTeil(i) as ETeil;
+                WriteFile("<item article =\"" + i + "\" quantity =\"" + et.DirektVerkauf + "\" />");
+            }
+
+            WriteFile("</selldirect>");
 
         }
 

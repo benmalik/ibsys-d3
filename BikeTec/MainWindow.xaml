@@ -627,6 +627,11 @@
                 <ComboBoxItem
 				Content="750"/>
             </ComboBox>
+
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="74,273,0,0" x:Name="direktVerkaufP1" VerticalAlignment="Top" Width="48" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="174,273,0,0" x:Name="direktVerkaufP2" VerticalAlignment="Top" Width="48" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="274,273,0,0" x:Name="direktVerkaufP3" VerticalAlignment="Top" Width="48" />
+
             <Label
 			Content="In diesem Schritt erfolgt die Eingabe der geplanten Absatzmengen. &#xA;Geben Sie hierfür bitte in Spalte 1 die Werte für die kommende Periode ein. In den rechten drei Spalten geben Sie bitte&#xA;einen Forecast-Wert ein."
 			Grid.Column="0"
@@ -692,6 +697,8 @@
 			Content="Forecast P2" />
 
         </Grid>
+        
+        
 
 
         <!-- Buffer Grid -->

@@ -533,20 +533,23 @@ namespace BikeTec
 
         private void berechneVerbrauch()
         {
-            dc.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(comboBox1.Text);
+            dc.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(comboBox1.Text) + Convert.ToInt32(direktVerkaufP1.Text);
             dc.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(comboBox4.Text);
             dc.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(comboBox7.Text);
             dc.GetTeil(1).VerbrauchPrognose3 = Convert.ToInt32(comboBox10.Text);
+            dc.GetTeil(1).DirektVerkauf = Convert.ToInt32(direktVerkaufP1.Text);
 
-            dc.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(comboBox2.Text);
+            dc.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(comboBox2.Text) + Convert.ToInt32(direktVerkaufP2.Text);
             dc.GetTeil(2).VerbrauchPrognose1 = Convert.ToInt32(comboBox5.Text);
             dc.GetTeil(2).VerbrauchPrognose2 = Convert.ToInt32(comboBox8.Text);
             dc.GetTeil(2).VerbrauchPrognose3 = Convert.ToInt32(comboBox11.Text);
+            dc.GetTeil(2).DirektVerkauf = Convert.ToInt32(direktVerkaufP2.Text);
 
-            dc.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(comboBox3.Text);
+            dc.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(comboBox3.Text) + Convert.ToInt32(direktVerkaufP3.Text);
             dc.GetTeil(3).VerbrauchPrognose1 = Convert.ToInt32(comboBox6.Text);
             dc.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(comboBox9.Text);
             dc.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(comboBox12.Text);
+            dc.GetTeil(3).DirektVerkauf = Convert.ToInt32(direktVerkaufP3.Text);
         }
 
         /* //////////////
