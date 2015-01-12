@@ -31,3 +31,4 @@ C:\Software\repo\ibsys-d3\BikeTec\obj\Debug\BikeTec_MarkupCompile.cache
 C:\Software\repo\ibsys-d3\BikeTec\obj\Debug\BikeTec.g.resources
 C:\Software\repo\ibsys-d3\BikeTec\obj\Debug\BikeTec.Properties.Resources.resources
 C:\Software\repo\ibsys-d3\BikeTec\obj\Debug\BikeTec.csproj.GenerateResource.Cache
+C:\Users\benmalik\Documents\GitHub\ibsys-d3\BikeTec\obj\Debug\BikeTec.csprojResolveAssemblyReference.cache

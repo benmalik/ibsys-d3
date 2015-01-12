@@ -30,8 +30,17 @@
     <system:String x:Key="WindowStart-labelChooseFile">Choose XML input file...</system:String>
     <system:String xml:space="preserve" x:Key="WindowStart-Welcome">Welcome to BIKE'n'ride PPS!&#xD;&#xA;&#xD;&#xA;This app automatically calculates economic order quantities and ressource planning for up to 3 shifts based on your input data. &#xD;&#xA;With the stock planning mechanism you can precisely control stock for the end of the planning period.&#xD;&#xA;&#xD;&#xA;The output file is formatted in XML, as is the input file, and this can easily be uploaded to your planning system.&#xD;&#xA;&#xD;&#xA;To begin, please click 'Continue'.</system:String>
     <system:String xml:space="preserve" x:Key="WindowStart-labelShifts">Here you can see the total production time needed per workplace per period.&#xD;&#xA; You can change the proposed number of shifts and overtime per day.&#xD;&#xA;</system:String>
-    <system:String x:Key="WindowStart-msgXML">XML Input Datei wurde eingelesen.</system:String>
+    <system:String x:Key="WindowStart-msgXML">XML input file has been imported</system:String>
     <system:String x:Key="WindowStart-notSaved">Planning data not saved! Close app?</system:String>
     <system:String x:Key="WindowStart-exit">Close app </system:String>
+    <system:String x:Key="WindowStart-directsaleNaN">Some direct sales input fields do not contain valid numbers!</system:String>
+    <system:String x:Key="WindowStart-saleswishNaN">Some sales input fields do not contain valid numbers!!</system:String>
+    <system:String x:Key="WindowStart-labelDirectSalePrice">Price</system:String>
+    <system:String x:Key="WindowStart-labelDirectSaleAmount">Amount</system:String>
+    <system:String x:Key="WindowStart-labelDirectSalePenalty">Penalty</system:String>
+    <system:String x:Key="WindowStart-labelDirectSale">Direct Sale</system:String>
+    <system:String x:Key="WindowStart-orderquantityNaN">Some order quantities do not contain valid numbers!</system:String>
+    <system:String x:Key="WindowStart-shiftsNaN">Some shifts fields do not contain valid numbers!</system:String>
+    <system:String x:Key="WindowStart-stockNaN">Some planned stock fields do not contain valid numbers!</system:String>
 
 </ResourceDictionary>

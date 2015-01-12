@@ -723,7 +723,7 @@
             	Margin="692,92,0,0"
             	Width="100"
             	Height="31"
-            	Content="Direktverkauf" />
+            	Content="{DynamicResource WindowStart-labelDirectSale}" />
             <Label
             	Grid.Column="0"
             	Grid.Row="0"
@@ -732,7 +732,7 @@
             	Margin="584,124,0,0"
             	Width="100"
             	Height="31"
-            	Content="Menge" />
+            	Content="{DynamicResource WindowStart-labelDirectSaleAmount}" />
             <Label
             	Grid.Column="0"
             	Grid.Row="0"
@@ -741,7 +741,7 @@
             	Margin="692,124,0,0"
             	Width="100"
             	Height="31"
-            	Content="Preis" />
+            	Content="{DynamicResource WindowStart-labelDirectSalePrice}" />
             <Label
             	Grid.Column="0"
             	Grid.Row="0"
@@ -750,7 +750,7 @@
             	Margin="800,124,0,0"
             	Width="120"
             	Height="31"
-            	Content="Konventionalstrafe" />
+            	Content="{DynamicResource WindowStart-labelDirectSalePenalty}" />
 
         </Grid>
 

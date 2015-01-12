@@ -32,11 +32,6 @@ namespace BikeTec
         static int kaufteilNummer = 0;
         bool genutzt = false;
         static bool fertig = false;
-        const String MSG_KEINE_NUM_WERTE_IN_PUFFERFELD = "Einige Pufferfelder enthalten keine numerische Zeichen!";
-        const String MSG_KEINE_NUM_WERTE_IN_VERKAUFSFELD = "Einige Verkaufsfelder enthalten keine numerische Zeichen!";
-        const String MSG_KEINE_NUM_WERTE_IN_DIREKTVERKAUFFELD = "Einige Direktverkaufsfelder enthalten keine numerische Zeichen!";
-        const String MSG_KEINE_NUM_WERTE_IN_SCHICHTENFELDER = "Einige Schichtenfelder enthalten keine numerische Zeichen!";
-        const String MSG_KEINE_NUM_WERTE_IN_ORDERFELD = "Einige Bestellungsfelder enthalten keine numerische Zeichen!";
         const String MSG_FILENAME_INPUT_XML = "Input_Period_";
 
         BrushConverter bc = new BrushConverter();
@@ -490,7 +485,7 @@ namespace BikeTec
             }
             catch (FormatException fe)
             {
-                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_SCHICHTENFELDER);
+                System.Windows.MessageBox.Show(Application.Current.Resources["WindowStart-shiftsNaN"].ToString());
                 return false;
             }
             return true;
@@ -563,26 +558,6 @@ namespace BikeTec
         {
             try
             {
-                dc.GetTeil(1).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP1.Text);
-                dc.GetTeil(2).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP2.Text);
-                dc.GetTeil(3).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP3.Text);
-
-                dc.GetTeil(1).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP1.Text);
-                dc.GetTeil(2).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP2.Text);
-                dc.GetTeil(3).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP3.Text);
-
-                dc.GetTeil(1).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP1.Text);
-                dc.GetTeil(2).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP2.Text);
-                dc.GetTeil(3).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP3.Text);
-            }
-            catch (FormatException fe)
-            {
-                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_DIREKTVERKAUFFELD);
-                return false;
-            }
-
-            try
-            {
                 dc.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(comboBox1.Text) + Convert.ToInt32(direktVerkaufMengeP1.Text);
                 dc.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(comboBox4.Text);
                 dc.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(comboBox7.Text);
@@ -600,9 +575,30 @@ namespace BikeTec
             }
             catch (FormatException fe)
             {
-                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_VERKAUFSFELD);
+                System.Windows.MessageBox.Show(Application.Current.Resources["WindowStart-saleswishNaN"].ToString());
                 return false;
             }
+            try
+            {
+                dc.GetTeil(1).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP1.Text);
+                dc.GetTeil(2).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP2.Text);
+                dc.GetTeil(3).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP3.Text);
+
+                dc.GetTeil(1).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP1.Text);
+                dc.GetTeil(2).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP2.Text);
+                dc.GetTeil(3).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP3.Text);
+
+                dc.GetTeil(1).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP1.Text);
+                dc.GetTeil(2).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP2.Text);
+                dc.GetTeil(3).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP3.Text);
+            }
+            catch (FormatException fe)
+            {
+                System.Windows.MessageBox.Show(Application.Current.Resources["WindowStart-directsaleNaN"].ToString());
+                return false;
+            }
+
+            
             return true;
         }
 
@@ -614,7 +610,7 @@ namespace BikeTec
         {
             if (!checkInput())
             {
-                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_PUFFERFELD);
+                System.Windows.MessageBox.Show(Application.Current.Resources["WindowStart-stockNaN"].ToString());
                 return;
             }
 
@@ -750,7 +746,7 @@ namespace BikeTec
             }
             catch (FormatException fe)
             {
-                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_ORDERFELD);
+                System.Windows.MessageBox.Show(Application.Current.Resources["WindowStart-orderquantityNaN"].ToString());
                 return;
             }
 

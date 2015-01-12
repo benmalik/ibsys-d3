@@ -33,4 +33,6 @@
     <system:String x:Key="WindowStart-msgXML">XML Input Datei wurde eingelesen.</system:String>
     <system:String x:Key="WindowStart-notSaved">Planungsdaten nicht gespeichert! App beenden?</system:String>
     <system:String x:Key="WindowStart-exit">App beenden</system:String>
+    <system:String x:Key="WindowStart-directsaleNaN">Einige Direktverkaufsfelder enthalten keine numerische Zeichen!</system:String>
+    <system:String x:Key="WindowStart-saleswishNaN">Einige Verkaufsfelder enthalten keine numerische Zeichen!</system:String>
 </ResourceDictionary>

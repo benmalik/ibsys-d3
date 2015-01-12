@@ -33,4 +33,13 @@
     <system:String x:Key="WindowStart-msgXML">XML Input Datei wurde eingelesen.</system:String>
     <system:String x:Key="WindowStart-notSaved">Planungsdaten nicht gespeichert! App beenden?</system:String>
     <system:String x:Key="WindowStart-exit">App beenden</system:String>
+    <system:String x:Key="WindowStart-directsaleNaN">Einige Direktverkaufsfelder enthalten keine numerische Zeichen!</system:String>
+    <system:String x:Key="WindowStart-saleswishNaN">Einige Verkaufsfelder enthalten keine numerische Zeichen!</system:String>
+    <system:String x:Key="WindowStart-labelDirectSalePrice">Preis</system:String>
+    <system:String x:Key="WindowStart-labelDirectSaleAmount">Menge</system:String>
+    <system:String x:Key="WindowStart-labelDirectSalePenalty">Konventionalstrafe</system:String>
+    <system:String x:Key="WindowStart-labelDirectSale">Direktverkauf</system:String>
+    <system:String x:Key="WindowStart-orderquantityNaN">Einige Bestellmengen enthalten keine numerische Zeichen!</system:String>
+    <system:String x:Key="WindowStart-shiftsNaN">Einige Schichtenfelder enthalten keine numerische Zeichen!</system:String>
+    <system:String x:Key="WindowStart-stockNaN">Einige geplante Lagerbestände enthalten keine numerische Zeichen!</system:String>
 </ResourceDictionary>
