@@ -43,4 +43,8 @@
     <system:String x:Key="WindowStart-shiftsNaN">Some shifts fields do not contain valid numbers!</system:String>
     <system:String x:Key="WindowStart-stockNaN">Some planned stock fields do not contain valid numbers!</system:String>
 
+    <system:String xml:space="preserve" x:Key="WindowStart-labelOvertime">Overtime&#xD;&#xA;min/Day</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelNoShifts">Shifts</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelTimeNeeded">Capacity#xD;&#xA;needed</system:String>
+
 </ResourceDictionary>

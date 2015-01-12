@@ -42,4 +42,7 @@
     <system:String x:Key="WindowStart-orderquantityNaN">Einige Bestellmengen enthalten keine numerische Zeichen!</system:String>
     <system:String x:Key="WindowStart-shiftsNaN">Einige Schichtenfelder enthalten keine numerische Zeichen!</system:String>
     <system:String x:Key="WindowStart-stockNaN">Einige geplante Lagerbestände enthalten keine numerische Zeichen!</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelOvertime">Überstunden&#xD;&#xA;min/Tag</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelNoShifts">Schichten</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelTimeNeeded">Kapazitäts-&#xA;bedarf</system:String>
 </ResourceDictionary>
