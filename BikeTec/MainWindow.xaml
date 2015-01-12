@@ -1495,8 +1495,8 @@
         		Height="71" />
             <Label Content="{DynamicResource WindowStart-labelOvertime}" HorizontalAlignment="Left" Margin="437,33,0,0" VerticalAlignment="Top" Height="43" Width="82"/>
             <Label Content="{DynamicResource WindowStart-labelOvertime}" HorizontalAlignment="Left" Margin="145,33,0,0" VerticalAlignment="Top" Height="43" Width="82"/>
-            <Label Content="{DynamicResource WindowStart-labelNoShifts}" HorizontalAlignment="Left" Margin="367,49,0,0" VerticalAlignment="Top" Height="43" Width="82"/>
-            <Label Content="{DynamicResource WindowStart-labelNoShifts}" HorizontalAlignment="Left" Margin="75,49,0,0" VerticalAlignment="Top" Height="43" Width="82"/>
+            <Label Content="{DynamicResource WindowStart-labelNoShifts}" HorizontalAlignment="Left" Margin="367,49,0,0" VerticalAlignment="Top" Height="25" Width="82"/>
+            <Label Content="{DynamicResource WindowStart-labelNoShifts}" HorizontalAlignment="Left" Margin="75,49,0,0" VerticalAlignment="Top" Height="25" Width="82"/>
             <Label Content="{DynamicResource WindowStart-labelTimeNeeded}" HorizontalAlignment="Left" Margin="290,33,0,0" VerticalAlignment="Top" Height="43" Width="82"/>
             <Label Content="{DynamicResource WindowStart-labelTimeNeeded}" HorizontalAlignment="Left" Margin="-2,33,0,0" VerticalAlignment="Top" Height="43" Width="82"/>
         </Grid>
