@@ -46,5 +46,6 @@
     <system:String xml:space="preserve" x:Key="WindowStart-labelOvertime">Overtime&#xD;&#xA;min/Day</system:String>
     <system:String xml:space="preserve" x:Key="WindowStart-labelNoShifts">Shifts</system:String>
     <system:String xml:space="preserve" x:Key="WindowStart-labelTimeNeeded">Capacity&#xA;needed</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelOrderQuantities">Calculate economic order quantitites and order types here. &#xD;&#xA;If needed, you can change calculated order quantities and order types.</system:String>
 
 </ResourceDictionary>

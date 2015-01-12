@@ -45,4 +45,5 @@
     <system:String xml:space="preserve" x:Key="WindowStart-labelOvertime">Überstunden&#xD;&#xA;min/Tag</system:String>
     <system:String xml:space="preserve" x:Key="WindowStart-labelNoShifts">Schichten</system:String>
     <system:String xml:space="preserve" x:Key="WindowStart-labelTimeNeeded">Kapazitäts-&#xA;bedarf</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelOrderQuantities">Berechnen Sie optimale Bestellmengen und Bestelltypen hier. &#xD;&#xA;Bei Bedarf können Sie berechnete Bestellmengen und Bestelltypen auch übersteuern.</system:String>
 </ResourceDictionary>
