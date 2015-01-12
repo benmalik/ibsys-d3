@@ -708,13 +708,13 @@
             	Margin="454,124,0,0"
             	Width="100"
             	Height="31"
-            	Content="Forecast P2" />
+            	Content="Forecast P3" />
             <Label VerticalAlignment="Top"
 			Height="31"
 			Width="100"
 			HorizontalAlignment="Left"
 			Margin="346,124,0,0"
-			Content="Forecast P3" />
+			Content="Forecast P2" />
             <Label
             	Grid.Column="0"
             	Grid.Row="0"
