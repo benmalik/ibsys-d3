@@ -143,10 +143,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\de.gif" />
-    <Resource Include="Resources\en.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
@@ -171,6 +167,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bikenridesmall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\de.png" />
+    <Resource Include="Resources\en.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

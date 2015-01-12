@@ -1547,7 +1547,7 @@
                 <ContextMenu/>
             </Image.ContextMenu>
         </Image>
-        <Button x:Name="button_DE_1" Content="" Grid.Column="4" HorizontalAlignment="Left" Margin="290,2,0,0" VerticalAlignment="Top" Width="41" Height="26" Click="de_button">
+        <Button x:Name="button_DE_1" Content="" Grid.Column="4" HorizontalAlignment="Left" Margin="298,10,0,0" VerticalAlignment="Top" Width="22" Height="15" Click="de_button">
             <!--<Button.Background>
                 <ImageBrush ImageSource="Resources/de.gif"/>
             </Button.Background>-->
@@ -1555,14 +1555,14 @@
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background">
                         <Setter.Value>
-                            <ImageBrush ImageSource="Resources/de.gif"/>
+                            <ImageBrush ImageSource="Resources/de.png"/>
                         </Setter.Value>
                     </Setter>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="Resources/de.gif"/>
+                                    <ImageBrush ImageSource="Resources/de.png"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -1570,9 +1570,9 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="button_EN_1" Content="" Grid.Column="4" HorizontalAlignment="Left" Margin="309,11,0,0" VerticalAlignment="Top" Width="41" Height="26" Click="en_button" Grid.ColumnSpan="2">
+        <Button x:Name="button_EN_1" Content="" Grid.Column="4" HorizontalAlignment="Left" Margin="325,10,0,0" VerticalAlignment="Top" Width="22" Height="15" Click="en_button" RenderTransformOrigin="0.704,2.118">
             <Button.Background>
-                <ImageBrush ImageSource="Resources/en.gif"/>
+                <ImageBrush ImageSource="Resources/en.png"/>
             </Button.Background>
         </Button>
         <WrapPanel Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="247,73,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.ColumnSpan="2"/>
