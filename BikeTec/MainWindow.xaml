@@ -43,9 +43,9 @@
             <Label HorizontalAlignment="Left"
         		VerticalAlignment="Top"
         		Margin="28,34,0,0"
-        		Width="602"
+        		Width="838"
         		Height="271"
-        		Content="Herzlich Willkommen im BikeTec Produktionsplanungs- und Steuerungssystem!&#xA; &#xA;Das integrierte Tool bieten Ihnen eine optimale Unterstützung bei der  Planung des Produktionsprogramms für&#xA;die nächste Periode. Nach der  Eingabe Ihres Vertriebswunschs für die kommende Periode führt das Tool&#xA;eine umfassende Planung des Produktionsprogramms durch. Neben der  Produktionsplanung schlägt Ihnen das&#xA;Tool auch eine optimale Bestellmenge  der einzelnen Kaufteile vor.  Die Anwendung führt Sie einfach durch die&#xA;einzelnen  Prozessschritte und erklärt jeweils kurz, welche Entscheidungen Sie zu treffen haben. &#xA;&#xA;Zum Start der Anwendung bitte auf &quot;Weiter&quot; klicken." />
+        		Content="{DynamicResource WindowStart-Welcome}"/>
             <Button Style="{DynamicResource Poly_Weiter}" Content="{DynamicResource WindowStart-labelNext}" Click="selectFile" Margin="0,0,10,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" FontFamily="Segoe UI Light" Grid.ColumnSpan="3"/>
         </Grid>
 
@@ -75,7 +75,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <TextBox Height="32" HorizontalAlignment="Left" Margin="90,96,0,0" x:Name="FileNameTextBox" Text="Zu importierende XML-Datei auswählen..."
+            <TextBox Height="32" HorizontalAlignment="Left" Margin="90,96,0,0" x:Name="FileNameTextBox" Text="{DynamicResource WindowStart-labelChooseFile}"
         		VerticalAlignment="Top" Width="393" Grid.Row="1"/>
             <ComboBox HorizontalAlignment="Left" x:Name="PeriodCombo"  VerticalAlignment="Top" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Height="32" Margin="400,135,0,0" IsEnabled="False" Visibility="Hidden" >
                 <ComboBoxItem Content="1"/>
@@ -107,7 +107,7 @@
         		VerticalAlignment="Top"
         		Width="602"
         		Height="86"
-        		Content="In diesem Schritt erfolgt das Importieren der XML-Datei. Hierdurch werden die für die Planung erforderlichen &#xA;Stammdaten eingelesen.&#xA;&#xA;Bitte wählen Sie in dem Dialog Ihre lokal gespeicherte XML-Datei aus." Margin="84,5,0,0" Grid.Row="1" />
+        		Content="{DynamicResource WindowStart-labelXML}" Margin="84,5,0,0" Grid.Row="1" />
         </Grid>
 
         <!-- bei allen Zurück und Weiter Buttons waren folgende Parameter definiert: Width="100" Height="25" -->
@@ -633,7 +633,7 @@
             <TextBox Height="23" HorizontalAlignment="Left" Margin="274,273,0,0" x:Name="direktVerkaufP3" VerticalAlignment="Top" Width="48" />
 
             <Label
-			Content="In diesem Schritt erfolgt die Eingabe der geplanten Absatzmengen. &#xA;Geben Sie hierfür bitte in Spalte 1 die Werte für die kommende Periode ein. In den rechten drei Spalten geben Sie bitte&#xA;einen Forecast-Wert ein."
+			Content="{DynamicResource WindowStart-labelForecast}"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
@@ -952,7 +952,7 @@
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="623,112,0,0" Width="80" Height="28" Content="P3" />
 
             <Separator Height="8" HorizontalAlignment="Left" Margin="70,0,0,133" x:Name="separator2" VerticalAlignment="Bottom" Width="635" />
-            <TextBlock Margin="70,412,111,117"><Run Language="de-de" Text="{DynamicResource WindowStart-labelBuffer}" FontFamily="Segoe UI Light"/></TextBlock>
+            <TextBlock Margin="70,412,111,117"><Run Language="de-de" Text="{DynamicResource WindowStart-labelBuffer}" FontFamily="Segoe UI"/></TextBlock>
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,436,0,0" Width="30" Height="25" Content="E26" />
             <TextBox HorizontalAlignment="Left"
 			VerticalAlignment="Top"
@@ -991,7 +991,7 @@
                 Style="{DynamicResource Poly_Zurueck}"
                 x:Name="buttonBackBuffer" Content="Zurück" Click="backBuffer" VerticalAlignment="Bottom" Margin="780,0,0,6" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Width="65" Height="33" FontFamily="Segoe UI Light"/>
             <Label
-            	Content="Hier aufgezeigt sind die vom Produktionsplanungssystem berechneten Lagerbestände am Ende der Planperiode. &#xA;Sie können diese bei Bedarf einfach direkt ändern."
+            	Content="{DynamicResource WindowStart-labelBufferHead}"
             	Grid.Column="0"
             	Grid.Row="0"
             	HorizontalAlignment="Left"
@@ -1019,176 +1019,176 @@
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,41,0,0" x:Name="textBoxK21" VerticalAlignment="Top" Width="64" />
             <Label Content="K21:" Height="28" HorizontalAlignment="Left" Margin="-42,39,0,0" x:Name="label1" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,41,713,0" x:Name="comboBoxK21" VerticalAlignment="Top" Width="67" SelectedIndex="0">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,70,0,0" x:Name="textBoxK22" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K22:" Height="28" HorizontalAlignment="Left" Margin="-42,68,0,0" x:Name="label2" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,713,0" x:Name="comboBoxK22" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,99,0,0" x:Name="textBoxK23" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K23:" Height="28" HorizontalAlignment="Left" Margin="-42,97,0,0" x:Name="label3" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,713,0" x:Name="comboBoxK23" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,128,0,0" x:Name="textBoxK24" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K24:" Height="28" HorizontalAlignment="Left" Margin="-42,126,0,0" x:Name="label4" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,713,0" x:Name="comboBoxK24" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,157,0,0" x:Name="textBoxK25" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K25:" Height="28" HorizontalAlignment="Left" Margin="-42,155,0,0" x:Name="label5" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,157,713,0" x:Name="comboBoxK25" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,186,0,0" x:Name="textBoxK27" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K27:" Height="28" HorizontalAlignment="Left" Margin="-42,184,0,0" x:Name="label6" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,186,713,0" x:Name="comboBoxK27" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,215,0,0" x:Name="textBoxK28" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K28:" Height="28" HorizontalAlignment="Left" Margin="-42,213,0,0" x:Name="label7" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,215,713,0" x:Name="comboBoxK28" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,244,0,0" x:Name="textBoxK32" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K32:" Height="28" HorizontalAlignment="Left" Margin="-42,242,0,0" x:Name="label8" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,244,713,0" x:Name="comboBoxK32" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,273,0,0" x:Name="textBoxK33" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K33:" Height="28" HorizontalAlignment="Left" Margin="-42,271,0,0" x:Name="label9" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,273,713,0" x:Name="comboBoxK33" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,302,0,0" x:Name="textBoxK34" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K34:" Height="28" HorizontalAlignment="Left" Margin="-42,300,0,0" x:Name="label10" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,302,713,0" x:Name="comboBoxK34" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,41,0,0" x:Name="textBoxK35" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K35:" Height="28" HorizontalAlignment="Left" Margin="188,39,0,0" x:Name="label11" VerticalAlignment="Top"/>
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,41,482,0" x:Name="comboBoxK35" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,70,0,0" x:Name="textBoxK36" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K36:" Height="28" HorizontalAlignment="Left" Margin="188,68,0,0" x:Name="label13" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,482,0" x:Name="comboBoxK36" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,99,0,0" x:Name="textBoxK37" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K37:" Height="28" HorizontalAlignment="Left" Margin="188,97,0,0" x:Name="label14" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,482,0" x:Name="comboBoxK37" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,128,0,0" x:Name="textBoxK38" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light" />
             <Label Content="K38:" Height="28" HorizontalAlignment="Left" Margin="188,126,0,0" x:Name="label15" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,482,0" x:Name="comboBoxK38" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,157,0,0" x:Name="textBoxK39" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K39:" Height="28" HorizontalAlignment="Left" Margin="188,155,0,0" x:Name="label16" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,157,482,0" x:Name="comboBoxK39" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,186,0,0" x:Name="textBoxK40" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K40:" Height="28" HorizontalAlignment="Left" Margin="188,184,0,0" x:Name="label17" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,186,482,0" x:Name="comboBoxK40" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,215,0,0" x:Name="textBoxK41" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K41:" Height="28" HorizontalAlignment="Left" Margin="188,213,0,0" x:Name="label18" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,215,482,0" x:Name="comboBoxK41" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,244,0,0" x:Name="textBoxK42" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K42:" Height="28" HorizontalAlignment="Left" Margin="188,242,0,0" x:Name="label19" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,244,482,0" x:Name="comboBoxK42" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,273,0,0" x:Name="textBoxK43" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K43:" Height="28" HorizontalAlignment="Left" Margin="188,271,0,0" x:Name="label20" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,273,482,0" x:Name="comboBoxK43" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="222,302,0,0" x:Name="textBoxK44" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K44:" Height="28" HorizontalAlignment="Left" Margin="188,300,0,0" x:Name="label21" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,302,482,0" x:Name="comboBoxK44" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,41,0,0" x:Name="textBoxK45" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K45:" Height="28" HorizontalAlignment="Left" Margin="444,39,0,0" x:Name="label22" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,41,227,0" x:Name="comboBoxK45" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,70,0,0" x:Name="textBoxK46" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K46:" Height="28" HorizontalAlignment="Left" Margin="444,68,0,0" x:Name="label23" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,70,227,0" x:Name="comboBoxK46" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,99,0,0" x:Name="textBoxK47" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K47:" Height="28" HorizontalAlignment="Left" Margin="444,97,0,0" x:Name="label24" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,99,227,0" x:Name="comboBoxK47" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,128,0,0" x:Name="textBoxK48" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K48:" Height="28" HorizontalAlignment="Left" Margin="444,126,0,0" x:Name="label25" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,128,227,0" x:Name="comboBoxK48" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,157,0,0" x:Name="textBoxK52" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K52:" Height="28" HorizontalAlignment="Left" Margin="444,155,0,0" x:Name="label26" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,157,227,0" x:Name="comboBoxK52" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,186,0,0" x:Name="textBoxK53" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K53:" Height="28" HorizontalAlignment="Left" Margin="444,184,0,0" x:Name="label27" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,186,227,0" x:Name="comboBoxK53" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,215,0,0" x:Name="textBoxK57" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K57:" Height="28" HorizontalAlignment="Left" Margin="444,213,0,0" x:Name="label28" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,215,227,0" x:Name="comboBoxK57" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,244,0,0" x:Name="textBoxK58" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K58:" Height="28" HorizontalAlignment="Left" Margin="444,242,0,0" x:Name="label29" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,244,227,0" x:Name="comboBoxK58" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <TextBox Height="23" HorizontalAlignment="Left" Margin="476,273,0,0" x:Name="textBoxK59" VerticalAlignment="Top" Width="64" FontFamily="Segoe UI Light"/>
             <Label Content="K59:" Height="28" HorizontalAlignment="Left" Margin="444,271,0,0" x:Name="label30" VerticalAlignment="Top" />
             <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,273,227,0" x:Name="comboBoxK59" SelectedIndex="0" VerticalAlignment="Top" Width="67">
-                <ComboBoxItem Content="Normal" />
-                <ComboBoxItem Content="Schnell" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelNormal}" />
+                <ComboBoxItem Content="{DynamicResource WindowStart-labelFast}" />
             </ComboBox>
             <Label
         		Content="In diesem Prozessschritt erfolgt die Festlegung der Bestellmengen von Fremdbezugsteilen. Sie können entweder&#xA;manuell Ihre eigenen Bestellwünsche erfassen oder die optimalen Bestellmengen vom System berechnen lassen.&#xA;Um die Bestellmengen vom System berechnen zu lassen, klicken Sie auf den entsprechenden Button."
@@ -1199,8 +1199,8 @@
         		Margin="-46,-32,0,0"
         		Width="644"
         		Height="71" />
-            <Button x:Name="buttonCalculateOrder" Content="Berechne&#xA;Bestellmengen" HorizontalAlignment="Right" Margin="0,0,190,6" Width="65" Height="34" Click="calculateOrder" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
-            <Button x:Name="buttonClearOrderData" Content="Bestellmengen&#xA;Zurücksetzen" HorizontalAlignment="Right" Margin="0,0,260,6" Width="65" Height="34" Click="clearOrderData" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
+            <Button x:Name="buttonCalculateOrder" Content="{DynamicResource WindowStart-labelCalculate}" HorizontalAlignment="Right" Margin="0,0,190,6" Width="65" Height="34" Click="calculateOrder" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
+            <Button x:Name="buttonClearOrderData" Content="{DynamicResource WindowStart-labelReset}" HorizontalAlignment="Right" Margin="0,0,260,6" Width="65" Height="34" Click="clearOrderData" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
 
         </Grid>
 
@@ -1429,7 +1429,7 @@
                 <ComboBoxItem Content="3" />
             </ComboBox>
             <Label
-        		Content="In diesem Prozessschritt erfolgt die Festlegung der Zusatzschichten sowie die Überstunden"
+        		Content="{DynamicResource WindowStart-labelShifts}"
         		Grid.Column="0"
         		Grid.Row="0"
         		HorizontalAlignment="Left"
@@ -1482,11 +1482,11 @@
             	VerticalAlignment="Top"
             	Width="602"
             	Height="86"
-            	Content="Die Planung wurde erfolgreich durchgeführt. Hier finden Sie eine Übersicht über das Ergebnis der Periode.&#xA;Sie haben nun die Möglichkeit das Ergebnis in eine XML-Datei zu speichern. Wählen  Sie hierfür den &#xA;Button &quot;Speichern&quot;." Margin="74,22,0,0" Grid.ColumnSpan="2" />
+            	Content="{DynamicResource WindowStart-labelSuccess}" Margin="74,22,0,0" Grid.ColumnSpan="2" />
             <Button x:Name="btnExportXML" Content="{DynamicResource WindowStart-labelSave}" HorizontalAlignment="Right" Margin="0,0,200,6" Width="66" Height="34" Click="btnExportFile" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="11" Background="#FFB4BBC4" Grid.Column="1" FontFamily="Segoe UI Light"/>
 
         </Grid>
-        <Image HorizontalAlignment="Left" Height="80" Margin="10,310,0,0" VerticalAlignment="Top" Width="150" Source="Resources/bikenridesmall.png" Grid.ColumnSpan="3" Grid.Row="1">
+        <Image HorizontalAlignment="Left" Height="80" Margin="10,321,0,0" VerticalAlignment="Top" Width="150" Source="Resources/bikenridesmall.png" Grid.ColumnSpan="3" Grid.Row="1">
             <Image.ContextMenu>
                 <ContextMenu/>
             </Image.ContextMenu>

@@ -13,15 +13,25 @@
     <system:String x:Key="WindowStart-labelNext">Next</system:String>
     <system:String x:Key="WindowStart-labelExit">Quit</system:String>
     <system:String x:Key="WindowStart-labelSave">Save</system:String>
-    <system:String x:Key="WindowStart-labelXML">In diesem Schritt erfolgt das Importieren der XML-Datei. Hierdurch werden die für die Planung erforderlichen &#xA;Stammdaten eingelesen.&#xA;&#xA;Bitte wählen Sie in dem Dialog Ihre lokal gespeicherte XML-Datei aus.</system:String>
-    <system:String x:Key="WindowStart-labelForecast">In diesem Schritt erfolgt die Eingabe der geplanten Absatzmengen. &#xA;Geben Sie hierfür bitte in Spalte 1 die Werte für die kommende Periode ein. In den rechten drei Spalten geben Sie bitte&#xA;einen Forecast-Wert ein.</system:String>
-    <system:String x:Key="WindowStart-labelPeriod">Aktuelle Periode</system:String>
-    <system:String x:Key="WindowStart-labelBuffer">Puffer für Teile die in mehrere Produkte eingehen</system:String>
+    <system:String x:Key="WindowStart-labelXML">Please choose the locally saved XML file with results of the previous period.</system:String>
+    <system:String x:Key="WindowStart-labelForecast">PLease enter actual and planned quantity of sales, as well as direct sales for the current period.</system:String>
+    <system:String x:Key="WindowStart-labelPeriod">Current Period</system:String>
+    <system:String x:Key="WindowStart-labelBuffer">Parts with multiple usage</system:String>
+    <system:String x:Key="WindowStart-labelBufferHead">If required, please manage planned stock levels for the end the planning period.</system:String>
     <system:String x:Key="WindowStart-labelVBuffer">Hier aufgezeigt sind die vom Produktionsplanungssystem vorgeschlagenen Puffer. Sie können diese entweder&#xA;unverändert übernehmen, oder ganz bzw. teilweise anpassen.</system:String>
     <system:String x:Key="WindowStart-labelOrder">In diesem Prozessschritt erfolgt die Festlegung der Bestellmengen von Fremdbezugsteilen. Sie können entweder&#xA;manuell Ihre eigenen Bestellwünsche erfassen oder die optimalen Bestellmengen vom System berechnen lassen.&#xA;Um die Bestellmengen vom System berechnen zu lassen, klicken Sie auf den entsprechenden Button.</system:String>
-    <system:String x:Key="WindowStart-labelCalculate">Berechne&#xA;Bestellmengen</system:String>
-    <system:String x:Key="WindowStart-labelSuccess">Die Planung wurde erfolgreich durchgeführt. Hier finden Sie eine Übersicht über das Ergebnis der Periode.&#xA;Sie haben nun die Möglichkeit das Ergebnis in eine XML-Datei zu speichern. Wählen  Sie hierfür den &#xA;Button &quot;Speichern&quot;.</system:String>
+    <system:String x:Key="WindowStart-labelCalculate">Calculate</system:String>
+    <system:String x:Key="WindowStart-labelReset">Reset</system:String>
+    <system:String x:Key="WindowStart-labelSuccess">Planning was successful. To save the output file choose 'Save'.</system:String>
     <system:String x:Key="WindowStart-chooseFile">Choose File</system:String>
     <system:String x:Key="WindowStart-labelBack">Back</system:String>
-    
+    <system:String x:Key="WindowStart-labelNormal">normal</system:String>
+    <system:String x:Key="WindowStart-labelFast">fast</system:String>
+    <system:String x:Key="WindowStart-labelChooseFile">Choose XML input file...</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-Welcome">Welcome to BIKE'n'ride PPS!&#xD;&#xA;&#xD;&#xA;This app automatically calculates economic order quantities and ressource planning for up to 3 shifts based on your input data. &#xD;&#xA;With the stock planning mechanism you can precisely control stock for the end of the planning period.&#xD;&#xA;&#xD;&#xA;The output file is formatted in XML, as is the input file, and this can easily be uploaded to your planning system.&#xD;&#xA;&#xD;&#xA;To begin, please click 'Continue'.</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelShifts">Here you can see the total production time needed per workplace per period.&#xD;&#xA; You can change the proposed number of shifts and overtime per day.&#xD;&#xA;</system:String>
+    <system:String x:Key="WindowStart-msgXML">XML Input Datei wurde eingelesen.</system:String>
+    <system:String x:Key="WindowStart-notSaved">Planning data not saved! Close app?</system:String>
+    <system:String x:Key="WindowStart-exit">Close app </system:String>
+
 </ResourceDictionary>

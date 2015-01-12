@@ -95,7 +95,7 @@ namespace BikeTec
         {
             if (!fertig)
             {
-                MessageBoxResult result = System.Windows.MessageBox.Show("Die Produktionsplanung wurde nicht gespeichert! Anwendung beenden?", "Anwendung beenden", MessageBoxButton.YesNo);
+                MessageBoxResult result = System.Windows.MessageBox.Show(Application.Current.Resources["WindowStart-notSaved"].ToString(), Application.Current.Resources["WindowStart-exit"].ToString(), MessageBoxButton.YesNo);
 
                 if (result == MessageBoxResult.No)
                     e.Cancel = true;
@@ -246,7 +246,7 @@ namespace BikeTec
 
                     buttonInputForecast.Visibility = System.Windows.Visibility.Visible;
 
-                    System.Windows.MessageBox.Show("Die XML-Datei wurde erfolgreich eingelesen.", "Info");
+                    System.Windows.MessageBox.Show(Application.Current.Resources["WindowStart-msgXML"].ToString(), "Info");
                 }
             }
             else { }
@@ -1201,7 +1201,7 @@ namespace BikeTec
 
         private string resolveOrderTypeForComboBox(Boolean eil)
         {
-            return eil ? "Schnell" : "Normal";
+            return eil ? Application.Current.Resources["WindowStart-labelFast"].ToString() : Application.Current.Resources["WindowStart-labelNormal"].ToString();
         }
 
         private void writeUserOdersToDcOrderList()

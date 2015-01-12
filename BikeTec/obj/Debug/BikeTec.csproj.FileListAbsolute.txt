@@ -1,5 +1,4 @@
 C:\Users\benmalik\Documents\GitHub\ibsys-d3\BikeTec\bin\Debug\BikeTec.exe.config
-C:\Users\benmalik\Documents\GitHub\ibsys-d3\BikeTec\obj\Debug\BikeTec.csprojResolveAssemblyReference.cache
 C:\Users\benmalik\Documents\GitHub\ibsys-d3\BikeTec\obj\Debug\Datenpräsentation\cultures\CultResource.de-DE.baml
 C:\Users\benmalik\Documents\GitHub\ibsys-d3\BikeTec\obj\Debug\Datenpräsentation\cultures\CultResource.en-US.baml
 C:\Users\benmalik\Documents\GitHub\ibsys-d3\BikeTec\obj\Debug\Datenpräsentation\cultures\CultResource.baml

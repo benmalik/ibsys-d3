@@ -13,16 +13,24 @@
     <system:String x:Key="WindowStart-labelNext">Weiter</system:String>
     <system:String x:Key="WindowStart-labelExit">Beenden</system:String>
     <system:String x:Key="WindowStart-labelSave">Speichern</system:String>
-    <system:String x:Key="WindowStart-labelXML">In diesem Schritt erfolgt das Importieren der XML-Datei. Hierdurch werden die für die Planung erforderlichen &#xA;Stammdaten eingelesen.&#xA;&#xA;Bitte wählen Sie in dem Dialog Ihre lokal gespeicherte XML-Datei aus.</system:String>
-    <system:String x:Key="WindowStart-labelForecast">In diesem Schritt erfolgt die Eingabe der geplanten Absatzmengen. &#xA;Geben Sie hierfür bitte in Spalte 1 die Werte für die kommende Periode ein. In den rechten drei Spalten geben Sie bitte&#xA;einen Forecast-Wert ein.</system:String>
+    <system:String x:Key="WindowStart-labelXML">Bitte wählen Sie nun die lokal gespeicherte XML-Datei mit den Ergebnisdaten der letzten Periode aus.</system:String>
+    <system:String x:Key="WindowStart-labelForecast">Geben Sie bitte die tatsächlichen und geplanten Absatzmengen sowie Direktverkäufe für die aktuelle Periode ein.</system:String>
     <system:String x:Key="WindowStart-labelPeriod">Aktuelle Periode</system:String>
-    <system:String x:Key="WindowStart-labelBuffer">Puffer für Teile die in mehrere Produkte eingehen</system:String>
+    <system:String x:Key="WindowStart-labelBuffer">Teile mit Mehrfachverwendung</system:String>
+    <system:String x:Key="WindowStart-labelBufferHead">Bitte nehmen Sie bei  Bedarf die Steuerung der Lagerbestände am Ende der Planungsperiode vor.</system:String>
     <system:String x:Key="WindowStart-labelVBuffer">Hier aufgezeigt sind die vom Produktionsplanungssystem vorgeschlagenen Puffer. Sie können diese entweder&#xA;unverändert übernehmen, oder ganz bzw. teilweise anpassen.</system:String>
     <system:String x:Key="WindowStart-labelOrder">In diesem Prozessschritt erfolgt die Festlegung der Bestellmengen von Fremdbezugsteilen. Sie können entweder&#xA;manuell Ihre eigenen Bestellwünsche erfassen oder die optimalen Bestellmengen vom System berechnen lassen.&#xA;Um die Bestellmengen vom System berechnen zu lassen, klicken Sie auf den entsprechenden Button.</system:String>
-    <system:String x:Key="WindowStart-labelCalculate">Berechne&#xA;Bestellmengen</system:String>
-    <system:String x:Key="WindowStart-labelSuccess">Die Planung wurde erfolgreich durchgeführt. Hier finden Sie eine Übersicht über das Ergebnis der Periode.&#xA;Sie haben nun die Möglichkeit das Ergebnis in eine XML-Datei zu speichern. Wählen  Sie hierfür den &#xA;Button &quot;Speichern&quot;.</system:String>
+    <system:String x:Key="WindowStart-labelCalculate">Berechnen</system:String>
+    <system:String x:Key="WindowStart-labelReset">Zurücksetzen</system:String>
+    <system:String x:Key="WindowStart-labelSuccess">Die Planung wurde erfolgreich durchgeführt. Um die Ausgabedatei zu speichern wählen Sie bitte 'Speichern'.</system:String>
     <system:String x:Key="WindowStart-chooseFile">Datei&#xA;öffnen</system:String>
     <system:String x:Key="WindowStart-labelBack">Zurück</system:String>
-
-
+    <system:String x:Key="WindowStart-labelNormal">Normal</system:String>
+    <system:String x:Key="WindowStart-labelFast">Eil</system:String>
+    <system:String x:Key="WindowStart-labelChooseFile">XML Input Datei auswählen...</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-Welcome">Herzlich Willkommen zum BIKE'n'ride PPS!&#xD;&#xA;&#xD;&#xA;Diese App berechnet automatisch optimale Bestellmengen und Ressourcenplanung für bis zu 3 Schichten auf Basis Ihrer Eingabedaten.&#xD;&#xA;Mithilfe der Bestandssteuerung können Sie Ihren Lagerstand am Ende der Planungsperiode genau kontrollieren.&#xD;&#xA;&#xD;&#xA;Die Ausgabedatei liegt wie die Eingabedatei im XML-Format vor und kann somit leicht in ihr Planungssystem hochgeladen werden.&#xD;&#xA;&#xD;&#xA;Um zu beginnen, klicken Sie bitte auf 'Weiter'.</system:String>
+    <system:String xml:space="preserve" x:Key="WindowStart-labelShifts">Hier ist der Gesamtbedarf an Produktionszeit pro Arbeitsplatz pro Periode zu sehen. &#xD;&#xA;Sie können die vorgeschlagenen Schichten und Überstunden pro Tag anpassen.</system:String>
+    <system:String x:Key="WindowStart-msgXML">XML Input Datei wurde eingelesen.</system:String>
+    <system:String x:Key="WindowStart-notSaved">Planungsdaten nicht gespeichert! App beenden?</system:String>
+    <system:String x:Key="WindowStart-exit">App beenden</system:String>
 </ResourceDictionary>
