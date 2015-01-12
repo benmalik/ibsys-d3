@@ -227,7 +227,7 @@ namespace Tool
                 ETeil et = instance.GetTeil(i) as ETeil;
 
                 //WriteFile("<salesWish>");
-                WriteFile("<item article =\"" + i + "\" quantity =\"" + (et.VerbrauchAktuell-et.DirektVerkauf) + "\" />");
+                WriteFile("<item article =\"" + i + "\" quantity =\"" + (et.VerbrauchAktuell-et.DirektVerkaufMenge) + "\" />");
                 //WriteFile("<SaleQuantity>" + et.VerbrauchAktuell + "</SaleQuantity>");
                 // WriteFile("<DirectSaleQuantity>" + "0" + "</DirectSaleQuantity>");
                 //WriteFile("<DirectSalePrice>" + "0.0" + "</DirectSalePrice>");
@@ -246,7 +246,7 @@ namespace Tool
             for (int i = 1; i < 4; ++i)
             {
                 ETeil et = instance.GetTeil(i) as ETeil;
-                WriteFile("<item article =\"" + i + "\" quantity =\"" + et.DirektVerkauf + "\" />");
+                WriteFile("<item article =\"" + i + "\" quantity =\"" + et.DirektVerkaufMenge + "\" price =\"" + et.DirektVerkaufPreis + "\" penalty =\"" + et.DirektVerkaufKonventionalstrafe + "\" />");
             }
 
             WriteFile("</selldirect>");

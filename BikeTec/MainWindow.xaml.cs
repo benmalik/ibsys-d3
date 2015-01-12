@@ -32,7 +32,11 @@ namespace BikeTec
         static int kaufteilNummer = 0;
         bool genutzt = false;
         static bool fertig = false;
-        const String MSG_KEINE_NUM_WERTE_IN_PUFFERFELD = "Einige Pufferfelder enthalten keine numerischen Zeichen!";
+        const String MSG_KEINE_NUM_WERTE_IN_PUFFERFELD = "Einige Pufferfelder enthalten keine numerische Zeichen!";
+        const String MSG_KEINE_NUM_WERTE_IN_VERKAUFSFELD = "Einige Verkaufsfelder enthalten keine numerische Zeichen!";
+        const String MSG_KEINE_NUM_WERTE_IN_DIREKTVERKAUFFELD = "Einige Direktverkaufsfelder enthalten keine numerische Zeichen!";
+        const String MSG_KEINE_NUM_WERTE_IN_SCHICHTENFELDER = "Einige Schichtenfelder enthalten keine numerische Zeichen!";
+        const String MSG_KEINE_NUM_WERTE_IN_ORDERFELD = "Einige Bestellungsfelder enthalten keine numerische Zeichen!";
         const String MSG_FILENAME_INPUT_XML = "Input_Period_";
 
         BrushConverter bc = new BrushConverter();
@@ -148,6 +152,10 @@ namespace BikeTec
             welcomeText.Visibility = System.Windows.Visibility.Hidden;
             ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
             DragDropGrid.Visibility = System.Windows.Visibility.Visible;
+            if (!genutzt)
+            {
+                buttonInputForecast.Visibility = System.Windows.Visibility.Hidden;
+            }
 
             labelWILLKOMMEN.Foreground = (Brush)bc.ConvertFrom("#ffffff");
             labelINPUT.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
@@ -404,6 +412,12 @@ namespace BikeTec
         {
             this.IncreaseButton_Click(sender, e);
 
+            if(!berechneVerbrauch())
+            {
+                return;
+            }
+            
+
             ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Hidden;
             bufferGrid.Visibility = System.Windows.Visibility.Visible;
@@ -414,8 +428,7 @@ namespace BikeTec
             labelNACHBESTELLUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
             labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
             labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
-
-            berechneVerbrauch();
+            
         }
         /* //////////////
          * INPUT SHIFT
@@ -441,38 +454,46 @@ namespace BikeTec
             //TODO: new Prognoseeingabe().Show();
         }
 
-        void berechneSchicht()
+        bool berechneSchicht()
         {
-            dc.GetArbeitsplatz(1).Schichten = comboBoxAP1.SelectedIndex + 1;
-            dc.GetArbeitsplatz(2).Schichten = comboBoxAP2.SelectedIndex + 1;
-            dc.GetArbeitsplatz(3).Schichten = comboBoxAP3.SelectedIndex + 1;
-            dc.GetArbeitsplatz(4).Schichten = comboBoxAP4.SelectedIndex + 1;
-            dc.GetArbeitsplatz(6).Schichten = comboBoxAP6.SelectedIndex + 1;
-            dc.GetArbeitsplatz(7).Schichten = comboBoxAP7.SelectedIndex + 1;
-            dc.GetArbeitsplatz(8).Schichten = comboBoxAP8.SelectedIndex + 1;
-            dc.GetArbeitsplatz(9).Schichten = comboBoxAP9.SelectedIndex + 1;
-            dc.GetArbeitsplatz(10).Schichten = comboBoxAP10.SelectedIndex + 1;
-            dc.GetArbeitsplatz(14).Schichten = comboBoxAP11.SelectedIndex + 1;
-            dc.GetArbeitsplatz(12).Schichten = comboBoxAP12.SelectedIndex + 1;
-            dc.GetArbeitsplatz(13).Schichten = comboBoxAP13.SelectedIndex + 1;
-            dc.GetArbeitsplatz(14).Schichten = comboBoxAP14.SelectedIndex + 1;
-            dc.GetArbeitsplatz(15).Schichten = comboBoxAP15.SelectedIndex + 1;
+            try
+            {
+                dc.GetArbeitsplatz(1).Schichten = comboBoxAP1.SelectedIndex + 1;
+                dc.GetArbeitsplatz(2).Schichten = comboBoxAP2.SelectedIndex + 1;
+                dc.GetArbeitsplatz(3).Schichten = comboBoxAP3.SelectedIndex + 1;
+                dc.GetArbeitsplatz(4).Schichten = comboBoxAP4.SelectedIndex + 1;
+                dc.GetArbeitsplatz(6).Schichten = comboBoxAP6.SelectedIndex + 1;
+                dc.GetArbeitsplatz(7).Schichten = comboBoxAP7.SelectedIndex + 1;
+                dc.GetArbeitsplatz(8).Schichten = comboBoxAP8.SelectedIndex + 1;
+                dc.GetArbeitsplatz(9).Schichten = comboBoxAP9.SelectedIndex + 1;
+                dc.GetArbeitsplatz(10).Schichten = comboBoxAP10.SelectedIndex + 1;
+                dc.GetArbeitsplatz(14).Schichten = comboBoxAP11.SelectedIndex + 1;
+                dc.GetArbeitsplatz(12).Schichten = comboBoxAP12.SelectedIndex + 1;
+                dc.GetArbeitsplatz(13).Schichten = comboBoxAP13.SelectedIndex + 1;
+                dc.GetArbeitsplatz(14).Schichten = comboBoxAP14.SelectedIndex + 1;
+                dc.GetArbeitsplatz(15).Schichten = comboBoxAP15.SelectedIndex + 1;
 
-            dc.GetArbeitsplatz(1).UeberMin = Convert.ToInt32(textBoxAP1.Text);
-            dc.GetArbeitsplatz(2).UeberMin = Convert.ToInt32(textBoxAP2.Text);
-            dc.GetArbeitsplatz(3).UeberMin = Convert.ToInt32(textBoxAP3.Text);
-            dc.GetArbeitsplatz(4).UeberMin = Convert.ToInt32(textBoxAP4.Text);
-            dc.GetArbeitsplatz(6).UeberMin = Convert.ToInt32(textBoxAP6.Text);
-            dc.GetArbeitsplatz(7).UeberMin = Convert.ToInt32(textBoxAP7.Text);
-            dc.GetArbeitsplatz(8).UeberMin = Convert.ToInt32(textBoxAP8.Text);
-            dc.GetArbeitsplatz(9).UeberMin = Convert.ToInt32(textBoxAP9.Text);
-            dc.GetArbeitsplatz(10).UeberMin = Convert.ToInt32(textBoxAP10.Text);
-            dc.GetArbeitsplatz(11).UeberMin = Convert.ToInt32(textBoxAP11.Text);
-            dc.GetArbeitsplatz(12).UeberMin = Convert.ToInt32(textBoxAP12.Text);
-            dc.GetArbeitsplatz(13).UeberMin = Convert.ToInt32(textBoxAP13.Text);
-            dc.GetArbeitsplatz(14).UeberMin = Convert.ToInt32(textBoxAP14.Text);
-            dc.GetArbeitsplatz(15).UeberMin = Convert.ToInt32(textBoxAP15.Text);
-
+                dc.GetArbeitsplatz(1).UeberMin = Convert.ToInt32(textBoxAP1.Text);
+                dc.GetArbeitsplatz(2).UeberMin = Convert.ToInt32(textBoxAP2.Text);
+                dc.GetArbeitsplatz(3).UeberMin = Convert.ToInt32(textBoxAP3.Text);
+                dc.GetArbeitsplatz(4).UeberMin = Convert.ToInt32(textBoxAP4.Text);
+                dc.GetArbeitsplatz(6).UeberMin = Convert.ToInt32(textBoxAP6.Text);
+                dc.GetArbeitsplatz(7).UeberMin = Convert.ToInt32(textBoxAP7.Text);
+                dc.GetArbeitsplatz(8).UeberMin = Convert.ToInt32(textBoxAP8.Text);
+                dc.GetArbeitsplatz(9).UeberMin = Convert.ToInt32(textBoxAP9.Text);
+                dc.GetArbeitsplatz(10).UeberMin = Convert.ToInt32(textBoxAP10.Text);
+                dc.GetArbeitsplatz(11).UeberMin = Convert.ToInt32(textBoxAP11.Text);
+                dc.GetArbeitsplatz(12).UeberMin = Convert.ToInt32(textBoxAP12.Text);
+                dc.GetArbeitsplatz(13).UeberMin = Convert.ToInt32(textBoxAP13.Text);
+                dc.GetArbeitsplatz(14).UeberMin = Convert.ToInt32(textBoxAP14.Text);
+                dc.GetArbeitsplatz(15).UeberMin = Convert.ToInt32(textBoxAP15.Text);
+            }
+            catch (FormatException fe)
+            {
+                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_SCHICHTENFELDER);
+                return false;
+            }
+            return true;
 
         }
 
@@ -480,6 +501,14 @@ namespace BikeTec
         void weiterButtonErgebnis(object sender, RoutedEventArgs e)
         {
             //this.IncreaseButton_Click(sender, e);
+            
+            //fillChart();
+            if(!berechneSchicht())
+            {
+                return;
+            }
+            
+            
 
             ForecastGrid.Visibility = System.Windows.Visibility.Hidden;
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Hidden;
@@ -496,8 +525,7 @@ namespace BikeTec
             labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#ffffff");
             labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
 
-            //fillChart();
-            berechneSchicht();
+            
 
             //berechneVerbrauch();
         }
@@ -531,39 +559,51 @@ namespace BikeTec
         //                */
         //}
 
-        private void berechneVerbrauch()
+        private bool berechneVerbrauch()
         {
-            int d1 = 0;
-            int d2 = 0;
-            int d3 = 0;
+            try
+            {
+                dc.GetTeil(1).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP1.Text);
+                dc.GetTeil(2).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP2.Text);
+                dc.GetTeil(3).DirektVerkaufMenge = Convert.ToInt32(direktVerkaufMengeP3.Text);
+
+                dc.GetTeil(1).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP1.Text);
+                dc.GetTeil(2).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP2.Text);
+                dc.GetTeil(3).DirektVerkaufPreis = Convert.ToInt32(direktVerkaufPreisP3.Text);
+
+                dc.GetTeil(1).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP1.Text);
+                dc.GetTeil(2).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP2.Text);
+                dc.GetTeil(3).DirektVerkaufKonventionalstrafe = Convert.ToInt32(direktVerkaufKonventionalstrafeP3.Text);
+            }
+            catch (FormatException fe)
+            {
+                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_DIREKTVERKAUFFELD);
+                return false;
+            }
 
             try
             {
-                d1 = Convert.ToInt32(direktVerkaufP1.Text);
-                d2 = Convert.ToInt32(direktVerkaufP2.Text);
-                d3 = Convert.ToInt32(direktVerkaufP3.Text);
+                dc.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(comboBox1.Text) + Convert.ToInt32(direktVerkaufMengeP1.Text);
+                dc.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(comboBox4.Text);
+                dc.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(comboBox7.Text);
+                dc.GetTeil(1).VerbrauchPrognose3 = Convert.ToInt32(comboBox10.Text);
+
+                dc.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(comboBox2.Text) + Convert.ToInt32(direktVerkaufMengeP2.Text);
+                dc.GetTeil(2).VerbrauchPrognose1 = Convert.ToInt32(comboBox5.Text);
+                dc.GetTeil(2).VerbrauchPrognose2 = Convert.ToInt32(comboBox8.Text);
+                dc.GetTeil(2).VerbrauchPrognose3 = Convert.ToInt32(comboBox11.Text);
+
+                dc.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(comboBox3.Text) + Convert.ToInt32(direktVerkaufMengeP3.Text);
+                dc.GetTeil(3).VerbrauchPrognose1 = Convert.ToInt32(comboBox6.Text);
+                dc.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(comboBox9.Text);
+                dc.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(comboBox12.Text);
             }
-            catch (Exception)
+            catch (FormatException fe)
             {
-                //throw
+                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_VERKAUFSFELD);
+                return false;
             }
-            dc.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(comboBox1.Text) + d1 ;
-            dc.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(comboBox4.Text);
-            dc.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(comboBox7.Text);
-            dc.GetTeil(1).VerbrauchPrognose3 = Convert.ToInt32(comboBox10.Text);
-            dc.GetTeil(1).DirektVerkauf = d1;
-
-            dc.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(comboBox2.Text) + d2;
-            dc.GetTeil(2).VerbrauchPrognose1 = Convert.ToInt32(comboBox5.Text);
-            dc.GetTeil(2).VerbrauchPrognose2 = Convert.ToInt32(comboBox8.Text);
-            dc.GetTeil(2).VerbrauchPrognose3 = Convert.ToInt32(comboBox11.Text);
-            dc.GetTeil(2).DirektVerkauf = d2;
-
-            dc.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(comboBox3.Text) + d3;
-            dc.GetTeil(3).VerbrauchPrognose1 = Convert.ToInt32(comboBox6.Text);
-            dc.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(comboBox9.Text);
-            dc.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(comboBox12.Text);
-            dc.GetTeil(3).DirektVerkauf = d3;
+            return true;
         }
 
         /* //////////////
@@ -704,6 +744,16 @@ namespace BikeTec
         {
             this.IncreaseButton_Click(sender, e);
 
+            try
+            {
+                writeUserOdersToDcOrderList();
+            }
+            catch (FormatException fe)
+            {
+                System.Windows.MessageBox.Show(MSG_KEINE_NUM_WERTE_IN_ORDERFELD);
+                return;
+            }
+
             ArticleOrderGrid.Visibility = System.Windows.Visibility.Hidden;
             SchichtGrid.Visibility = System.Windows.Visibility.Visible;
             //ergebnisGrid.Visibility = System.Windows.Visibility.Hidden;
@@ -717,7 +767,6 @@ namespace BikeTec
             labelSCHICHT.Foreground = (Brush)bc.ConvertFrom("#a8a8a8");
             labelZUSAMMENFASSUNG.Foreground = (Brush)bc.ConvertFrom("#ffffff");
 
-            writeUserOdersToDcOrderList();
 
             dc.SetPuffer(1, Convert.ToInt32(comboBox100.Text));
             dc.SetPuffer(2, Convert.ToInt32(comboBox200.Text));
@@ -1315,27 +1364,18 @@ namespace BikeTec
 
         private void writeUserDataToDc(int KaufteilNumber, string value, String orderType)
         {
-            try
+            int menge = Convert.ToInt32(value);
+            Boolean typeOfOrder = (orderType.Equals("Schnell")) ? true : false;
+            kaufteilNummer = KaufteilNumber;
+            Bestellposition bp = dc.Bestellung.Find(BestellungExists);
+            if (null == bp)
             {
-                int menge = Convert.ToInt32(value);
-                Boolean typeOfOrder = (orderType.Equals("Schnell")) ? true : false;
-                kaufteilNummer = KaufteilNumber;
-                Bestellposition bp = dc.Bestellung.Find(BestellungExists);
-                if (null == bp)
-                {
-                    Kaufteil k = dc.KaufteilList.Find(getKaufteil);
-                    bp = new Bestellposition(k, 0, typeOfOrder);
-                    dc.AddBestellposition(bp);
-                }
-                bp.Menge = menge;
-                bp.Eil = typeOfOrder;
+                Kaufteil k = dc.KaufteilList.Find(getKaufteil);
+                bp = new Bestellposition(k, 0, typeOfOrder);
+                dc.AddBestellposition(bp);
             }
-            catch (Exception e)
-            {
-            }
-
-
-
+            bp.Menge = menge;
+            bp.Eil = typeOfOrder;
         }
 
         private static bool BestellungExists(Bestellposition bp)

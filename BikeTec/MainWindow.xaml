@@ -126,13 +126,14 @@
                 x:Name="buttonBackForecast" Content="{DynamicResource WindowStart-labelBack}" Click="backForecast" VerticalAlignment="Bottom" Margin="780,0,0,10" HorizontalAlignment="Left" Background="#FF666666" Foreground ="#FFFFFFFF" Width="65" Height="33" FontFamily="Segoe UI Light"/>
             <!-- Margin="100,0,26,-18" -->
 
-            <ComboBox HorizontalAlignment="Left"
+            <TextBox HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="152,156,0,0"
-			Width="120"
+			Margin="130,156,0,0"
+			Width="100"
 			Height="20"
-			x:Name="comboBox1"
-			SelectedIndex="2">
+            Text="0"
+			x:Name="comboBox1"/>
+            <!--SelectedIndex="2">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -165,17 +166,18 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="152,195,0,0"
-			Width="120"
+			Margin="130,195,0,0"
+			Width="100"
 			Height="20"
-			x:Name="comboBox2"
-			SelectedIndex="2">
+            Text="0"
+			x:Name="comboBox2"/>
+            <!--SelectedIndex="2">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -208,17 +210,18 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="152,234,0,0"
-			Width="120"
+			Margin="130,234,0,0"
+			Width="100"
 			Height="20"
-			x:Name="comboBox3"
-			SelectedIndex="3">
+            Text="0"
+			x:Name="comboBox3"/>
+            <!--SelectedIndex="3">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -251,14 +254,15 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			x:Name="comboBox4" HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="280,156,0,0"
-			Width="120"
-			Height="20"
-			SelectedIndex="3">
+			Margin="238,156,0,0"
+			Width="100"
+            Text="0"
+			Height="20"/>
+            <!--SelectedIndex="3">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -291,14 +295,15 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox VerticalAlignment="Top"
+            </ComboBox-->
+            <TextBox VerticalAlignment="Top"
 			Height="20"
 			x:Name="comboBox5"
-			Width="120"
+			Width="100"
 			HorizontalAlignment="Left"
-			Margin="280,195,0,0"
-			SelectedIndex="2">
+            Text="0"
+			Margin="238,195,0,0"/>
+            <!--SelectedIndex="2">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -331,17 +336,18 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			x:Name="comboBox6"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="280,234,0,0"
-			Width="120"
-			Height="20"
-			SelectedIndex="2">
+			Margin="238,234,0,0"
+			Width="100"
+            Text="0"
+			Height="20"/>
+            <!--SelectedIndex="2">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -374,14 +380,15 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			x:Name="comboBox7" HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="410,156,0,0"
-			Width="120"
+			Margin="346,156,0,0"
+			Width="100"
 			Height="20"
-			SelectedIndex="3">
+            Text="0"/>
+            <!--SelectedIndex="3">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -414,17 +421,18 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="410,195,0,0"
-			Width="120"
+			Margin="346,195,0,0"
+			Width="100"
 			Height="20"
 			x:Name="comboBox8"
-			SelectedIndex="2">
+            Text="0"/>
+            <!--SelectedIndex="2">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -457,17 +465,18 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			x:Name="comboBox9"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="410,234,0,0"
-			Width="120"
+			Margin="346,234,0,0"
+			Width="100"
 			Height="20"
-			SelectedIndex="2">
+            Text="0"/>
+            <!--SelectedIndex="2">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -500,14 +509,15 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			x:Name="comboBox10" HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="538,156,0,0"
-			Width="120"
+			Margin="454,156,0,0"
+			Width="100"
 			Height="20"
-			SelectedIndex="4">
+            Text="0"/>
+            <!--SelectedIndex="4">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -540,17 +550,18 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="538,195,0,0"
-			Width="120"
+			Margin="454,195,0,0"
+			Width="100"
 			Height="20"
 			x:Name="comboBox11"
-			SelectedIndex="2">
+            Text="0"/>
+            <!--SelectedIndex="2">
                 <ComboBoxItem
 				Content="0"/>
                 <ComboBoxItem
@@ -583,54 +594,63 @@
 				Content="700"/>
                 <ComboBoxItem
 				Content="750"/>
-            </ComboBox>
-            <ComboBox
+            </ComboBox-->
+            <TextBox
 			x:Name="comboBox12"
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="538,234,0,0"
-			Width="120"
+			Margin="454,234,0,0"
+			Width="100"
 			Height="20"
-			SelectedIndex="2">
-                <ComboBoxItem
+            Text="0"/>
+            <!--SelectedIndex="2">
+            <ComboBoxItem
 				Content="0"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="50"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="100"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="150"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="200"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="250"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="300"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="350"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="400"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="450"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="500"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="550"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="600"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="650"/>
-                <ComboBoxItem
+            <ComboBoxItem
 				Content="700"/>
-                <ComboBoxItem
-				Content="750"/>
-            </ComboBox>
+            <ComboBoxItem
+				Content="750"/-->
 
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="74,273,0,0" x:Name="direktVerkaufP1" VerticalAlignment="Top" Width="48" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="174,273,0,0" x:Name="direktVerkaufP2" VerticalAlignment="Top" Width="48" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="274,273,0,0" x:Name="direktVerkaufP3" VerticalAlignment="Top" Width="48" />
+
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="584,156,0,0" x:Name="direktVerkaufMengeP1" VerticalAlignment="Top" Width="100" Text="0"/>
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="584,195,0,0" x:Name="direktVerkaufMengeP2" VerticalAlignment="Top" Width="100" Text="0"/>
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="584,234,0,0" x:Name="direktVerkaufMengeP3" VerticalAlignment="Top" Width="100" Text="0"/>
+
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="692,156,0,0" x:Name="direktVerkaufPreisP1" VerticalAlignment="Top" Width="100" Text="0"/>
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="692,195,0,0" x:Name="direktVerkaufPreisP2" VerticalAlignment="Top" Width="100" Text="0"/>
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="692,234,0,0" x:Name="direktVerkaufPreisP3" VerticalAlignment="Top" Width="100" Text="0"/>
+
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="800,156,0,0" x:Name="direktVerkaufKonventionalstrafeP1" VerticalAlignment="Top" Width="100" Text="0"/>
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="800,195,0,0" x:Name="direktVerkaufKonventionalstrafeP2" VerticalAlignment="Top" Width="100" Text="0"/>
+            <TextBox Height="20" HorizontalAlignment="Left" Margin="800,234,0,0" x:Name="direktVerkaufKonventionalstrafeP3" VerticalAlignment="Top" Width="100" Text="0"/>
 
             <Label
 			Content="{DynamicResource WindowStart-labelForecast}"
@@ -642,33 +662,33 @@
 			Width="644"
 			Height="71" />
             <Label HorizontalAlignment="Left"
-			VerticalAlignment="Bottom"
-			Margin="76,0,0,328"
+			VerticalAlignment="Top"
+			Margin="76,156,0,0"
 			Width="64"
 			Height="31"
 			Content="P1" />
-            <Label
-			Grid.Column="0"
-			Grid.Row="0"
-			HorizontalAlignment="Left"
-			VerticalAlignment="Top"
-			Margin="76,232,0,0"
-			Width="64"
-			Height="31"
-			Content="P3" />
             <Label HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="76,190,0,0"
+			Margin="76,195,0,0"
 			Width="64"
 			Height="31"
 			Content="P2" />
             <Label
+            	Grid.Column="0"
+            	Grid.Row="0"
+            	HorizontalAlignment="Left"
+            	VerticalAlignment="Top"
+            	Margin="76,234,0,0"
+            	Width="64"
+            	Height="31"
+            	Content="P3" />
+            <Label
 			Grid.Column="0"
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="152,124,0,0"
-			Width="120"
+			Margin="130,124,0,0"
+			Width="100"
 			Height="31"
 			Content="{DynamicResource WindowStart-labelPeriod}" />
             <Label
@@ -677,24 +697,60 @@
 			Grid.Row="0"
 			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="280,124,0,0"
-			Width="120"
+			Margin="238,124,0,0"
+			Width="100"
 			Height="31" />
+            <Label
+            	Grid.Column="0"
+            	Grid.Row="0"
+            	HorizontalAlignment="Left"
+            	VerticalAlignment="Top"
+            	Margin="454,124,0,0"
+            	Width="100"
+            	Height="31"
+            	Content="Forecast P2" />
             <Label VerticalAlignment="Top"
 			Height="31"
-			Width="124"
-			HorizontalAlignment="Right"
-			Margin="0,124,272,0"
+			Width="100"
+			HorizontalAlignment="Left"
+			Margin="346,124,0,0"
 			Content="Forecast P3" />
             <Label
-			Grid.Column="0"
-			Grid.Row="0"
-			HorizontalAlignment="Left"
-			VerticalAlignment="Top"
-			Margin="410,124,0,0"
-			Width="120"
-			Height="31"
-			Content="Forecast P2" />
+            	Grid.Column="0"
+            	Grid.Row="0"
+            	HorizontalAlignment="Left"
+            	VerticalAlignment="Top"
+            	Margin="692,92,0,0"
+            	Width="100"
+            	Height="31"
+            	Content="Direktverkauf" />
+            <Label
+            	Grid.Column="0"
+            	Grid.Row="0"
+            	HorizontalAlignment="Left"
+            	VerticalAlignment="Top"
+            	Margin="584,124,0,0"
+            	Width="100"
+            	Height="31"
+            	Content="Menge" />
+            <Label
+            	Grid.Column="0"
+            	Grid.Row="0"
+            	HorizontalAlignment="Left"
+            	VerticalAlignment="Top"
+            	Margin="692,124,0,0"
+            	Width="100"
+            	Height="31"
+            	Content="Preis" />
+            <Label
+            	Grid.Column="0"
+            	Grid.Row="0"
+            	HorizontalAlignment="Left"
+            	VerticalAlignment="Top"
+            	Margin="800,124,0,0"
+            	Width="120"
+            	Height="31"
+            	Content="Konventionalstrafe" />
 
         </Grid>
 
@@ -737,7 +793,7 @@
 			Margin="105,168,0,0"
 			Width="100"
 			Height="20"
-            Text="50"
+            Text="70"
 			x:Name="comboBox101" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,193,0,0" Width="30" Height="25" Content="E50" />
@@ -746,7 +802,7 @@
 			Margin="105,196,0,0"
 			Width="100"
 			Height="20"
-            Text="90"
+            Text="70"
 			x:Name="comboBox102" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,221,0,0" Width="30" Height="25" Content="E4" />
@@ -881,7 +937,7 @@
 			Margin="605,168,0,0"
 			Width="100"
 			Height="20"
-            Text="80"
+            Text="60"
 			x:Name="comboBox301" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,193,0,0" Width="30" Height="25" Content="E30" />
@@ -890,7 +946,7 @@
 			Margin="605,196,0,0"
 			Width="100"
 			Height="20"
-            Text="70"
+            Text="60"
 			x:Name="comboBox302" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,221,0,0" Width="30" Height="25" Content="E6" />
@@ -899,7 +955,7 @@
 			Margin="605,224,0,0"
 			Width="100"
 			Height="20"
-            Text="70"
+            Text="60"
 			x:Name="comboBox303" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,249,0,0" Width="30" Height="25" Content="E12" />
@@ -908,7 +964,7 @@
 			Margin="605,252,0,0"
 			Width="100"
 			Height="20"
-            Text="70"
+            Text="60"
 			x:Name="comboBox304" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,277,0,0" Width="30" Height="25" Content="E29" />
@@ -917,7 +973,7 @@
 			Margin="605,280,0,0"
 			Width="100"
 			Height="20"
-            Text="70"
+            Text="60"
 			x:Name="comboBox305" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,305,0,0" Width="30" Height="25" Content="E9" />
@@ -926,7 +982,7 @@
 			Margin="605,308,0,0"
 			Width="100"
 			Height="20"
-            Text="70"
+            Text="60"
 			x:Name="comboBox306" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,333,0,0" Width="30" Height="25" Content="E15" />
@@ -935,7 +991,7 @@
 			Margin="605,336,0,0"
 			Width="100"
 			Height="20"
-            Text="70"
+            Text="60"
 			x:Name="comboBox307" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,361,0,0" Width="30" Height="25" Content="E20" />
@@ -944,11 +1000,11 @@
 			Margin="605,364,0,0"
 			Width="100"
 			Height="20"
-            Text="70"
+            Text="60"
 			x:Name="comboBox308" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="123,112,0,0" Width="80" Height="28" Content="P1" />
-            <Label HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,112,385,0" Width="80" Height="28" Content="P2" />
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="373,112,0,0" Width="80" Height="28" Content="P2" />
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="623,112,0,0" Width="80" Height="28" Content="P3" />
 
             <Separator Height="8" HorizontalAlignment="Left" Margin="70,0,0,133" x:Name="separator2" VerticalAlignment="Bottom" Width="635" />
@@ -959,7 +1015,7 @@
 			Margin="105,441,0,0"
 			Width="100"
 			Height="20"
-            Text="210"
+            Text="200"
 			x:Name="comboBox401" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="309,438,0,0" Width="30" Height="25" Content="E16" />
@@ -968,7 +1024,7 @@
 			Margin="355,441,0,0"
 			Width="100"
 			Height="20"
-            Text="250"
+            Text="200"
 			x:Name="comboBox402" />
 
             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="570,438,0,0" Width="30" Height="25" Content="E17" />
@@ -977,7 +1033,7 @@
 			Margin="605,441,0,0"
 			Width="100"
 			Height="20"
-            Text="290"
+            Text="200"
 			x:Name="comboBox403" />
 
             <Button 
