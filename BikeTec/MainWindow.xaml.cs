@@ -20,7 +20,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 
-namespace BikeTec
+namespace BikeNRide
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
