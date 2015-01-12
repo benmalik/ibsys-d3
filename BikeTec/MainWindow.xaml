@@ -28,7 +28,7 @@
             </controls:WizardProgressBar>
             -->
 
-        <Grid x:Name="welcomeText" Margin="-71,46,60,-46" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="5" Visibility="Visible" d:IsHidden="True">
+        <Grid x:Name="welcomeText" Margin="0,39,0,0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="6" Visibility="Visible" d:IsHidden="false">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="892" />
                 <ColumnDefinition Width="6*" />
@@ -42,11 +42,11 @@
             </Grid.RowDefinitions>
             <Label HorizontalAlignment="Left"
         		VerticalAlignment="Top"
-        		Margin="152,184,0,0"
+        		Margin="28,34,0,0"
         		Width="602"
         		Height="271"
         		Content="Herzlich Willkommen im BikeTec Produktionsplanungs- und Steuerungssystem!&#xA; &#xA;Das integrierte Tool bieten Ihnen eine optimale Unterstützung bei der  Planung des Produktionsprogramms für&#xA;die nächste Periode. Nach der  Eingabe Ihres Vertriebswunschs für die kommende Periode führt das Tool&#xA;eine umfassende Planung des Produktionsprogramms durch. Neben der  Produktionsplanung schlägt Ihnen das&#xA;Tool auch eine optimale Bestellmenge  der einzelnen Kaufteile vor.  Die Anwendung führt Sie einfach durch die&#xA;einzelnen  Prozessschritte und erklärt jeweils kurz, welche Entscheidungen Sie zu treffen haben. &#xA;&#xA;Zum Start der Anwendung bitte auf &quot;Weiter&quot; klicken." />
-            <Button Style="{DynamicResource Poly_Weiter}" Content="{DynamicResource WindowStart-labelNext}" Click="selectFile" Margin="0,0,-60,52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" Grid.Column="2" />
+            <Button Style="{DynamicResource Poly_Weiter}" Content="{DynamicResource WindowStart-labelNext}" Click="selectFile" Margin="0,0,10,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" FontFamily="Segoe UI Light" Grid.ColumnSpan="3"/>
         </Grid>
 
         <!-- Progress Bar
@@ -101,8 +101,8 @@
                 <!--<RadioButton Name="Internet" GroupName="DownloadLocation" Content="Internet" Checked="Internet_OnChecked"/> -->
             </StackPanel>
 
-            <Button Style="{DynamicResource Poly_Weiter}" x:Name="buttonInputForecast" Content="{DynamicResource WindowStart-labelNext}" Click="inputForecast" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground ="#FFFFFFFF" Height="33" Width="66" Grid.Row="1" FontFamily="Segoe UI Light"/>
-            <Button Style="{DynamicResource Poly_Zurueck}" x:Name="buttonBackSelectFile" Content="{DynamicResource WindowStart-labelBack}" Click="backSelectFile" VerticalAlignment="Bottom" Grid.Row="1" Margin="774,0,0,10" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Width="65" Height="33" FontFamily="Segoe UI Light"/>
+            <Button Style="{DynamicResource Poly_Weiter}" x:Name="buttonInputForecast" Content="{DynamicResource WindowStart-labelNext}" Click="inputForecast" Margin="0,0,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground ="#FFFFFFFF" Height="33" Width="65" Grid.Row="1" FontFamily="Segoe UI Light"/>
+            <Button Style="{DynamicResource Poly_Zurueck}" x:Name="buttonBackSelectFile" Content="{DynamicResource WindowStart-labelBack}" Click="backSelectFile" VerticalAlignment="Bottom" Grid.Row="1" Margin="780,0,0,10" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Width="65" Height="33" FontFamily="Segoe UI Light"/>
             <Label HorizontalAlignment="Left"
         		VerticalAlignment="Top"
         		Width="602"
@@ -123,7 +123,7 @@
                 Content="{DynamicResource WindowStart-labelNext}"  FontFamily="Segoe UI Light"/>
             <Button 
                 Style="{DynamicResource Poly_Zurueck}"
-                x:Name="buttonBackForecast" Content="{DynamicResource WindowStart-labelBack}" Click="backForecast" VerticalAlignment="Bottom" Margin="774,0,0,9" HorizontalAlignment="Left" Background="#FF666666" Foreground ="#FFFFFFFF" Width="65" Height="33" FontFamily="Segoe UI Light"/>
+                x:Name="buttonBackForecast" Content="{DynamicResource WindowStart-labelBack}" Click="backForecast" VerticalAlignment="Bottom" Margin="780,0,0,10" HorizontalAlignment="Left" Background="#FF666666" Foreground ="#FFFFFFFF" Width="65" Height="33" FontFamily="Segoe UI Light"/>
             <!-- Margin="100,0,26,-18" -->
 
             <ComboBox HorizontalAlignment="Left"
@@ -697,8 +697,8 @@
 			Content="Forecast P2" />
 
         </Grid>
-        
-        
+
+
 
 
         <!-- Buffer Grid -->
@@ -982,14 +982,14 @@
 
             <Button 
             Style="{DynamicResource Poly_Weiter}"
-			Margin="0,0,10,7" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65"
+			Margin="0,0,10,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" FontFamily="Segoe UI Light"
 			
 			Content="{DynamicResource WindowStart-labelNext}"
 			x:Name="buttonOrder"
-			Click="inputOrder" />
+			Click="inputOrder"/>
             <Button 
                 Style="{DynamicResource Poly_Zurueck}"
-                x:Name="buttonBackBuffer" Content="Zurück" Click="backBuffer" VerticalAlignment="Bottom" Margin="774,0,0,6" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Width="65" Height="33" RenderTransformOrigin="-0.714,-0.431" />
+                x:Name="buttonBackBuffer" Content="Zurück" Click="backBuffer" VerticalAlignment="Bottom" Margin="780,0,0,6" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Width="65" Height="33" FontFamily="Segoe UI Light"/>
             <Label
             	Content="Hier aufgezeigt sind die vom Produktionsplanungssystem berechneten Lagerbestände am Ende der Planperiode. &#xA;Sie können diese bei Bedarf einfach direkt ändern."
             	Grid.Column="0"
@@ -1010,10 +1010,11 @@
 
         		Content="{DynamicResource WindowStart-labelNext}"
         		x:Name="buttonValidation"
-        		Click="showButtonValidation" Visibility="Hidden" />
+        		Click="showButtonValidation" Visibility="Hidden" 
+                FontFamily="Segoe UI Light"/>
             <Button 
         		Style="{DynamicResource Poly_Zurueck}"
-        		x:Name="buttonBackArticleOrder" Content="{DynamicResource WindowStart-labelBack}" Click="backArticleOrder" VerticalAlignment="Bottom" Margin="654,0,0,6" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Height="33" Width="66" FontFamily="Segoe UI Light"/>
+        		x:Name="buttonBackArticleOrder" Content="{DynamicResource WindowStart-labelBack}" Click="backArticleOrder" VerticalAlignment="Bottom" Margin="0,0,101,6" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" FontFamily="Segoe UI Light" RenderTransformOrigin="0.182,0.485"/>
 
             <TextBox Height="23" HorizontalAlignment="Left" Margin="-10,41,0,0" x:Name="textBoxK21" VerticalAlignment="Top" Width="64" />
             <Label Content="K21:" Height="28" HorizontalAlignment="Left" Margin="-42,39,0,0" x:Name="label1" VerticalAlignment="Top" />
@@ -1198,8 +1199,8 @@
         		Margin="-46,-32,0,0"
         		Width="644"
         		Height="71" />
-            <Button x:Name="buttonCalculateOrder" Content="Berechne&#xA;Bestellmengen" HorizontalAlignment="Left" Margin="564,436,0,0" Width="65" Height="34" Click="calculateOrder" VerticalAlignment="Top" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
-            <Button x:Name="buttonClearOrderData" Content="Bestellmengen&#xA;Zurücksetzen" HorizontalAlignment="Left" Margin="484,436,0,0" Width="65" Height="34" Click="clearOrderData" VerticalAlignment="Top" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
+            <Button x:Name="buttonCalculateOrder" Content="Berechne&#xA;Bestellmengen" HorizontalAlignment="Right" Margin="0,0,190,6" Width="65" Height="34" Click="calculateOrder" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
+            <Button x:Name="buttonClearOrderData" Content="Bestellmengen&#xA;Zurücksetzen" HorizontalAlignment="Right" Margin="0,0,260,6" Width="65" Height="34" Click="clearOrderData" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="9" Background="#FFB4BBC4" RenderTransformOrigin="0.096,-1.197"/>
 
         </Grid>
 
@@ -1299,14 +1300,14 @@
 
             <Button 
             Style="{DynamicResource Poly_Weiter}"
-			        		Margin="0,0,10,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65"
+			        		Margin="0,0,10,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" FontFamily="Segoe UI Light"
 			
 			Content="{DynamicResource WindowStart-labelNext}"
 			x:Name="btnWeiterErgebnis"
 			Click="weiterButtonErgebnis" />
             <Button 
                 Style="{DynamicResource Poly_Zurueck}"
-                x:Name="btnBackOutputGrid" Content="Zurück" Click="backErgebnis" VerticalAlignment="Bottom" Margin="654,0,0,6" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Height="33" Width="65" />
+                x:Name="btnBackOutputGrid" Content="Zurück" Click="backErgebnis" VerticalAlignment="Bottom" Margin="0,0,101,6" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="33" Width="65" FontFamily="Segoe UI Light" RenderTransformOrigin="0.462,0.455" />
 
             <Label Content="AP1:" Height="28" HorizontalAlignment="Left" Margin="-42,39,0,0" x:Name="labelAP1" VerticalAlignment="Top" />
             <Label Content="" Height="28" HorizontalAlignment="Left" Margin="-10,39,0,0" x:Name="labelAP1z" VerticalAlignment="Top" Width="48"/>
@@ -1449,13 +1450,13 @@
             <!-- bei allen Zurück und Weiter Buttons waren folgende Parameter definiert: Width="100" Height="25" -->
             <Button 
                 Style="{DynamicResource Poly_Weiter}"
-                Margin="0,0,10,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="34" Width="65"
+                Margin="0,0,10,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FF666666" Foreground="White" Height="34" Width="65" FontFamily="Segoe UI Light"
                 x:Name="btnBeenden" 
                 Click="beendeAnwendung" 
                 Content="{DynamicResource WindowStart-labelExit}" Grid.Column="1" Visibility="Visible"  />
             <Button 
                 Style="{DynamicResource Poly_Zurueck}"
-                x:Name="btnBackSchichtGrid" Content="{DynamicResource WindowStart-labelBack}" Click="backShift" VerticalAlignment="Bottom" Margin="289.5,0,0,6" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" Grid.Column="1" Height="33" Width="65" />
+                x:Name="btnBackSchichtGrid" Content="{DynamicResource WindowStart-labelBack}" Click="backShift" VerticalAlignment="Bottom" Margin="289.5,0,0,6" HorizontalAlignment="Left" Background="#FF666666" Foreground="White" FontFamily="Segoe UI Light" Grid.Column="1" Height="33" Width="65" />
             <!-- Margin="100,0,0,7" -->
 
 
@@ -1482,7 +1483,7 @@
             	Width="602"
             	Height="86"
             	Content="Die Planung wurde erfolgreich durchgeführt. Hier finden Sie eine Übersicht über das Ergebnis der Periode.&#xA;Sie haben nun die Möglichkeit das Ergebnis in eine XML-Datei zu speichern. Wählen  Sie hierfür den &#xA;Button &quot;Speichern&quot;." Margin="74,22,0,0" Grid.ColumnSpan="2" />
-            <Button x:Name="btnExportXML" Content="{DynamicResource WindowStart-labelSave}" HorizontalAlignment="Left" Margin="199.5,495,0,0" Width="66" Height="34" Click="btnExportFile" VerticalAlignment="Top" BorderBrush="#FF707070" FontSize="11" Background="#FFB4BBC4" Grid.Column="1"/>
+            <Button x:Name="btnExportXML" Content="{DynamicResource WindowStart-labelSave}" HorizontalAlignment="Right" Margin="0,0,200,6" Width="66" Height="34" Click="btnExportFile" VerticalAlignment="Bottom" BorderBrush="#FF707070" FontSize="11" Background="#FFB4BBC4" Grid.Column="1" FontFamily="Segoe UI Light"/>
 
         </Grid>
         <Image HorizontalAlignment="Left" Height="80" Margin="10,310,0,0" VerticalAlignment="Top" Width="150" Source="Resources/bikenridesmall.png" Grid.ColumnSpan="3" Grid.Row="1">

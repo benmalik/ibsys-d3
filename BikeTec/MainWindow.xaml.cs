@@ -533,23 +533,37 @@ namespace BikeTec
 
         private void berechneVerbrauch()
         {
-            dc.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(comboBox1.Text) + Convert.ToInt32(direktVerkaufP1.Text);
+            int d1 = 0;
+            int d2 = 0;
+            int d3 = 0;
+
+            try
+            {
+                d1 = Convert.ToInt32(direktVerkaufP1.Text);
+                d2 = Convert.ToInt32(direktVerkaufP2.Text);
+                d3 = Convert.ToInt32(direktVerkaufP3.Text);
+            }
+            catch (Exception)
+            {
+                //throw
+            }
+            dc.GetTeil(1).VerbrauchAktuell = Convert.ToInt32(comboBox1.Text) + d1 ;
             dc.GetTeil(1).VerbrauchPrognose1 = Convert.ToInt32(comboBox4.Text);
             dc.GetTeil(1).VerbrauchPrognose2 = Convert.ToInt32(comboBox7.Text);
             dc.GetTeil(1).VerbrauchPrognose3 = Convert.ToInt32(comboBox10.Text);
-            dc.GetTeil(1).DirektVerkauf = Convert.ToInt32(direktVerkaufP1.Text);
+            dc.GetTeil(1).DirektVerkauf = d1;
 
-            dc.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(comboBox2.Text) + Convert.ToInt32(direktVerkaufP2.Text);
+            dc.GetTeil(2).VerbrauchAktuell = Convert.ToInt32(comboBox2.Text) + d2;
             dc.GetTeil(2).VerbrauchPrognose1 = Convert.ToInt32(comboBox5.Text);
             dc.GetTeil(2).VerbrauchPrognose2 = Convert.ToInt32(comboBox8.Text);
             dc.GetTeil(2).VerbrauchPrognose3 = Convert.ToInt32(comboBox11.Text);
-            dc.GetTeil(2).DirektVerkauf = Convert.ToInt32(direktVerkaufP2.Text);
+            dc.GetTeil(2).DirektVerkauf = d2;
 
-            dc.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(comboBox3.Text) + Convert.ToInt32(direktVerkaufP3.Text);
+            dc.GetTeil(3).VerbrauchAktuell = Convert.ToInt32(comboBox3.Text) + d3;
             dc.GetTeil(3).VerbrauchPrognose1 = Convert.ToInt32(comboBox6.Text);
             dc.GetTeil(3).VerbrauchPrognose2 = Convert.ToInt32(comboBox9.Text);
             dc.GetTeil(3).VerbrauchPrognose3 = Convert.ToInt32(comboBox12.Text);
-            dc.GetTeil(3).DirektVerkauf = Convert.ToInt32(direktVerkaufP3.Text);
+            dc.GetTeil(3).DirektVerkauf = d3;
         }
 
         /* //////////////
