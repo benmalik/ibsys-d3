@@ -1360,7 +1360,7 @@ namespace BikeNRide
         private void writeUserDataToDc(int KaufteilNumber, string value, String orderType)
         {
             int menge = Convert.ToInt32(value);
-            Boolean typeOfOrder = (orderType.Equals("Schnell")) ? true : false;
+            Boolean typeOfOrder = (orderType.Equals(Application.Current.Resources["WindowStart-labelFast"].ToString())) ? true : false;
             kaufteilNummer = KaufteilNumber;
             Bestellposition bp = dc.Bestellung.Find(BestellungExists);
             if (null == bp)
